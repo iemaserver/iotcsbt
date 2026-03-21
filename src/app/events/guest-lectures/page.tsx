@@ -5,42 +5,52 @@ import { useEffect, useRef } from "react";
 import DepartmentPage from "@/components/site/DepartmentPage";
 
 // ─── Expanded Data ────────────────────────────────────────────────────────────
-const GUEST_LECTURES = [
+const GUEST_LECTURES =[
   {
-    id: "gl1",
-    speakerName: "Mr. Harish Menon",
-    topic: "Scaling Cloud Native Systems",
-    date: "March 04, 2026",
-    designation: "Principal Architect, CloudNine Labs",
-    photo: "/photo/2.jpg",
-    description: "An in-depth session on orchestrating microservices, handling high traffic loads, and implementing Kubernetes in production environments.",
+    id: "pe2",
+    speakerName: "Prof. Debashis De",
+    topic: "Social Edge AI Session",
+    date: "September 3, 2025",
+    designation: "MAKAUT",
+    photo:
+      "https://res.cloudinary.com/dvky83edw/image/upload/iot/289f569d-2f9b-4860-9462-eee449e3ec64.png",
+    description:
+      "An insightful session on “Social Edge AI” exploring how edge-based artificial intelligence is transforming real-world applications through faster decision-making, enhanced privacy, and decentralized intelligence. The talk highlighted impactful use cases across healthcare, smart cities, agriculture, and sustainable technologies.",
   },
   {
-    id: "gl2",
-    speakerName: "Dr. Leena Iyer",
-    topic: "Applied Cryptography in FinTech",
-    date: "February 12, 2026",
-    designation: "Research Director, SecureNet Research",
-    photo: "/photo/3.jpg",
-    description: "Exploring the mathematical foundations of modern encryption algorithms used to secure digital transactions and blockchain wallets.",
+    id: "pe3",
+    speakerName:
+      "Prof. Suparna Kar Chowdhury & Prof. (Dr.) Kousik Dasgupta",
+    topic: "IEEE CIS Student Branch Chapter Inauguration",
+    date: "January 5, 2026",
+    designation: "IEEE Kolkata Section",
+    photo:
+      "https://res.cloudinary.com/dvky83edw/image/upload/v1774118504/iot/137c76a2-b7f3-4275-bd3d-43c8e5605c59.png",
+    description:
+      "The formal inauguration of the IEEE Computational Intelligence Society (CIS) Student Branch Chapter marked a significant milestone in promoting research, innovation, and industry collaboration in Computational Intelligence. The chapter aims to create opportunities for advanced research and industry engagement.",
   },
   {
-    id: "gl3",
-    speakerName: "Ms. Ananya Das",
-    topic: "Designing for Accessibility (a11y)",
-    date: "January 28, 2026",
-    designation: "Lead UX Engineer, Global Tech",
-    photo: "/photo/4.jpg",
-    description: "A practical guide to building inclusive web applications that comply with WCAG standards and provide a seamless experience for all users.",
+    id: "pe4",
+    speakerName:
+      "Prof. Joseph Peters, Prof. Binay Bhattacharya, Prof. Uwe Glässer, Prof. Satyajit Chakrabarti, Prof. Rajashree Paul",
+    topic: "International Academic Delegation Visit",
+    date: "February 5, 2026",
+    designation: "Simon Fraser University, Canada",
+    photo:
+      "https://res.cloudinary.com/dvky83edw/image/upload/v1774118780/iot/c13d23aa-90ef-409d-b13e-05fb09e90ba2.png",
+    description:
+      "The IEDC Lab hosted an international delegation from Simon Fraser University, enabling global academic exchange. Students presented research projects recognized in IEEE and Springer venues, receiving expert feedback and collaboration opportunities.",
   },
   {
-    id: "gl4",
-    speakerName: "Mr. Rohan Chatterjee",
-    topic: "The Future of Quantum Machine Learning",
-    date: "December 15, 2025",
-    designation: "Senior Data Scientist, Qubit Core",
-    photo: "/photo/5.jpg",
-    description: "An introductory lecture bridging the gap between quantum mechanics and traditional neural networks, showcasing potential industry breakthroughs.",
+    id: "pe5",
+    speakerName: "Mr. Santanu Ghosh",
+    topic: "Agentic AI in Software Engineering",
+    date: "January 29, 2026",
+    designation: "Tata Consultancy Services (TCS)",
+    photo:
+      "https://res.cloudinary.com/dvky83edw/image/upload/v1774119262/iot/do4nyqvmtq6k0w74iqxe.jpg",
+    description:
+      "An expert lecture on Agentic AI in software engineering, covering its role in modern development, industry applications, and emerging trends. The session helped bridge academic learning with real-world industry expectations.",
   },
 ];
 

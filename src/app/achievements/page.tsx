@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import DepartmentPage from "@/components/site/DepartmentPage";
 
-// ─── Data Schema & 10 Mock Achievements ──────────────────────────────────────
+// ─── Data Schema & 8 Department Highlights ───────────────────────────────────
 type Achievement = {
   id: string;
   title: string;
@@ -18,94 +18,72 @@ type Achievement = {
 const ACHIEVEMENTS: Achievement[] = [
   {
     id: "a1",
-    title: "National Smart India Hackathon Finalist",
-    category: "Hackathon",
-    date: "Dec 2025",
-    member: "Team CipherStack",
-    image: "/photo/1.jpg",
-    description: "Secured a top 10 position nationwide by developing an AI-driven predictive diagnostic tool for rural clinics.",
+    title: "Hackathon Winner",
+    category: "JPMorgan Chase CFG 2025 - Social Impact",
+    date: "2025",
+    member: "Team FootPathshala",
+    image: "https://res.cloudinary.com/dvky83edw/image/upload/v1774104001/iot/08182265-1d07-4b60-ac81-72aed66b0956.png",
+    description: "Built award-winning solutions like FootPathshala at JPMorgan Chase Code for Good 2025 with geo-tagged face attendance, ML-powered assessments, real-time dashboards, and scalable automation.",
   },
   {
     id: "a2",
-    title: "IEEE Best Research Paper Award",
-    category: "Research",
-    date: "Oct 2025",
-    member: "Dr. Sandip Mandal",
-    image: "/photo/2.jpg",
-    description: "Awarded 'Best Paper' at the Int. Conference on Edge Computing for lightweight blockchain consensus.",
+    title: "IndiaAI Impact Summit 2026",
+    category: "AI Challenge",
+    date: "2026",
+    member: "IEM-UEM Teams",
+    image: "https://res.cloudinary.com/dvky83edw/image/upload/v1774099272/iot/4c5adcf5-81ae-45d4-a989-71dd48f6b1aa_de6560.png",
+    description: "IEM-UEM teams won top honors at the YUVAi Global Challenge at Bharat Mandapam.",
   },
   {
     id: "a3",
-    title: "Inter-University Coding League Champions",
-    category: "Competition",
-    date: "Aug 2025",
-    member: "Dept. Programming Team",
-    image: "/photo/3.jpg",
-    description: "Dominated the algorithmic challenges, winning first place among 120 participating institutions.",
+    title: "Innovation Showcase at STPI",
+    category: "Innovation",
+    date: "2026",
+    member: "IEM-UEM Student Startups",
+    image: "https://res.cloudinary.com/dvky83edw/image/upload/v1774098091/iot/ec0e3942-bb2d-4ccc-8b39-1a96c4dd48f4.png",
+    description: "Presented IEM-UEM student startups to Honorable West Bengal IT Minister Babul Supriyo and IT Secretary Shubhanjan Das.",
   },
   {
     id: "a4",
-    title: "Google Women Techmakers Scholar",
-    category: "Scholarship",
-    date: "Jun 2025",
-    member: "Priya Sharma",
-    image: "/photo/4.jpg",
-    description: "Selected from thousands of applicants globally, recognizing her contributions to open-source.",
+    title: "SIH 2025 Grand Finale",
+    category: "Hackathon",
+    date: "2025",
+    member: "Team ThinkBit",
+    image: "https://res.cloudinary.com/dvky83edw/image/upload/v1774099485/iot/630b65d2-c9eb-46dc-81a0-afde5664f0ee.png",
+    description: "Team ThinkBit represented the department at the Smart India Hackathon Grand Finale held at Sri Sri University.",
   },
-  {
-    id: "a5",
-    title: "Patent Granted: Autonomous Drone Navigation",
-    category: "Innovation",
-    date: "Mar 2025",
-    member: "IoT Systems Research Group",
-    image: "/photo/5.jpg",
-    description: "Secured a national patent for a spatial-mapping algorithm allowing drones to navigate GPS-denied environments.",
-  },
-  {
-    id: "a6",
-    title: "DefCon Capture The Flag Runners-up",
-    category: "Cyber Security",
-    date: "Jan 2025",
-    member: "Team NullPointer",
-    image: "/photo/1.jpg",
-    description: "Competed globally in rigorous penetration testing challenges, finishing 2nd in the regional qualifiers.",
-  },
+
+
   {
     id: "a7",
-    title: "State Govt. AI Startup Grant",
-    category: "Entrepreneurship",
-    date: "Nov 2024",
-    member: "Visionary Tech (Alumni)",
-    image: "/photo/2.jpg",
-    description: "Department alumni secured a $50,000 seed grant for their computer vision agricultural startup.",
+    title: "SATYAMEBA Supercomputing Initiative",
+    category: "UEM Kolkata - HPC and AI Research",
+    date: "2025",
+    member: "Students, Faculty and Leadership",
+    image: "https://res.cloudinary.com/dvky83edw/image/upload/v1774103669/iot/e7aa4373-5920-499d-af38-7d109e14ecef.png",
+    description: "Showcasing the SATYAMEBA 2025 initiative, a collaborative effort to advance AI acceleration, multi-GPU architectures, and high-performance computing for next-generation research.",
   },
-  {
-    id: "a8",
-    title: "National Robotics Championship Gold",
-    category: "Robotics",
-    date: "Sep 2024",
-    member: "RoboKnights Society",
-    image: "/photo/3.jpg",
-    description: "Built a fully autonomous search-and-rescue rover that navigated a complex disaster simulation arena.",
-  },
-  {
-    id: "a9",
-    title: "Global Blockchain Symposium Panelist",
-    category: "Leadership",
-    date: "Jul 2024",
-    member: "Dr. Keerthi S.",
-    image: "/photo/4.jpg",
-    description: "Invited as a keynote panelist to discuss the future of decentralized academic credentialing in Dubai.",
-  },
+ 
+  
   {
     id: "a10",
-    title: "Outstanding Faculty Innovator Award",
-    category: "Award",
-    date: "May 2024",
-    member: "Apurba Nandi",
-    image: "/photo/5.jpg",
-    description: "Recognized by the Ministry of Education for integrating advanced IoT hardware into undergraduate curriculum.",
+    title: "AI for Smart Mining",
+    category: "CMPDI Hackathon 2025 - Runner-Up",
+    date: "2025",
+    member: "CMPDI Hackathon Team",
+    image: "https://res.cloudinary.com/dvky83edw/image/upload/v1774103610/iot/2839f291-11e1-47bf-bf72-c56c2bc3b861.png",
+    description: "Awarded Runner-Up at the Ministry of Coal CMPDI R and D Hackathon 2025 for an intelligent monitoring and control system for ventilation and fire safety in underground coal mines.",
   },
+  {
+    id: "a11",
+    title: "KrishiDhan AI System",
+    category: "Square Hacks 2025 Finalist - AgriTech",
+    date: "2025",
+    member: "KrishiDhan Team",
+    image: "https://res.cloudinary.com/dvky83edw/image/upload/v1774103994/iot/849c54cf-aa80-43bb-aa47-c488c063c8e3.png",
+    description: "Top 10 finalist among 650+ teams at Square Hacks 2025, IIT Delhi, with an offline-first AI system on Raspberry Pi 5 for soil health assessment using Explainable AI.",
+  },
+ 
 ];
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
@@ -146,7 +124,7 @@ function UserIcon({ className }: { className?: string }) {
 export default function AchievementsPage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Split data: Top 4 for the Bento Grid, remaining 6 for the Standard Grid
+  // Split data: Top 4 for the Bento Grid, remaining items for the Standard Grid
   const featuredAchievements = ACHIEVEMENTS.slice(0, 4);
   const remainingAchievements = ACHIEVEMENTS.slice(4);
 

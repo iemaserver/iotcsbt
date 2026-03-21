@@ -27,7 +27,7 @@ const NAV_ITEMS: NavItem[] = [
     label: "Events",
     children: [
       { label: "Upcoming Events", href: "/events/upcoming" },
-      { label: "Workshops & Seminars", href: "/events/workshops" },
+      
       { label: "Guest Lectures", href: "/events/guest-lectures" },
       { label: "Past Events", href: "/events/past-events" },
     ],
@@ -68,7 +68,7 @@ function DesktopNavItem({
     return (
       <Link
         href={item.href ?? "/"}
-        className="relative group shrink-0 px-3 py-2.5 text-[12px] lg:text-[13px] font-medium text-slate-600 hover:text-sky-700 transition-colors duration-200 select-none"
+        className="relative font-merriweather group shrink-0 px-3 py-2.5 text-[12px] lg:text-[13px] font-medium text-slate-600 hover:text-sky-700 transition-colors duration-200 select-none"
         style={{
           fontFamily: "'Space Grotesk', sans-serif",
           letterSpacing: "0.05em",
@@ -84,7 +84,7 @@ function DesktopNavItem({
   }
 
   return (
-    <div className="group relative shrink-0 px-3 ">
+    <div className="group relative shrink-0 px-3 py-2.5 flex">
       <button
         type="button"
         className="inline-flex items-center gap-1 text-[12px] lg:text-[13px] font-medium text-slate-600 hover:text-sky-700 transition-colors duration-200"

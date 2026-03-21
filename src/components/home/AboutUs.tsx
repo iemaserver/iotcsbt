@@ -13,73 +13,73 @@ gsap.registerPlugin(ScrollTrigger);
 const bentoItems = [
   {
     id: 1,
-    img: "https://media.licdn.com/dms/image/v2/D5622AQEhnpqaDnHLhw/feedshare-shrink_2048_1536/B56ZyVwKoHKYAk-/0/1772038957816?e=1775692800&v=beta&t=fQfW85HPZLD_tiZWbC1unWlNdbkXKL6u5IFl5tjWdtY",
-    label: "Effortless Prompt Perfection",
-    desc: "14 days trial • after $5/month",
+    img: "https://res.cloudinary.com/dvky83edw/image/upload/v1774098091/iot/ec0e3942-bb2d-4ccc-8b39-1a96c4dd48f4.png",
+    label: "Innovation Showcase at STPI",
+    desc: "Presented IEM-UEM student startups to Honorable West Bengal IT Minister Babul Supriyo & IT Secretary Shubhanjan Das",
     size: "tall",
     showOnMobile: true,
   },
   {
     id: 2,
-    img: "https://media.licdn.com/dms/image/v2/D4E22AQF_ZIDTTAd6Uw/feedshare-shrink_2048_1536/B4EZxsPPxUGgAk-/0/1771342462457?e=1775692800&v=beta&t=qTjrsB7H_5WVuTcnNfBOdyGF960S18YgR7o8QdpZDHg",
-    label: "Your AI Prompt Companion",
-    desc: "PromptPal",
+    img: "https://res.cloudinary.com/dvky83edw/image/upload/v1774099272/iot/4c5adcf5-81ae-45d4-a989-71dd48f6b1aa_de6560.png",
+    label: "IndiaAI Impact Summit 2026",
+  desc: "IEM-UEM teams win top honors at YUVAi Global Challenge, Bharat Mandapam",
     size: "large",
     showOnMobile: true,
   },
   {
     id: 3,
-    img: "https://media.licdn.com/dms/image/v2/D5622AQHQ3QA5aldF-Q/feedshare-shrink_2048_1536/B56ZsOMfO5H8A0-/0/1765469714698?e=1775692800&v=beta&t=kqmOTbcpj4de-r5HkQGpwQ1FU8vjGoqYqW1lhOj0hyo",
-    label: "Settings",
-    desc: "Toggle",
+    img: "https://res.cloudinary.com/dvky83edw/image/upload/v1774099485/iot/630b65d2-c9eb-46dc-81a0-afde5664f0ee.png",
+    label: "SIH 2025 Grand Finale",
+  desc: "Team ThinkBit at Smart India Hackathon Grand Finale, Sri Sri University",
     size: "normal",
     showOnMobile: false,
   },
   {
     id: 4,
-    img: "https://media.licdn.com/dms/image/v2/D4D22AQE-ozXYJaxJbQ/feedshare-shrink_2048_1536/B4DZw3IiaKGQAk-/0/1770451511207?e=1775692800&v=beta&t=XYjBYD-kjOZ6ugfoz-1r-oHl2FkCGB9_svU9Nr8gmTk",
-    label: "25M+",
-    desc: "created prompts",
+    img: "https://res.cloudinary.com/dvky83edw/image/upload/v1774099669/iot/ef5a4cbd-e5a5-4625-8e82-f896a8d1e135.png",
+   label: "Global Academic Interaction",
+  desc: "Prof. Mahasweta Sarkar engages with student researchers at IEDC, UEM Kolkata",
     size: "normal",
     showOnMobile: true,
   },
   {
     id: 5,
-    img: "https://media.licdn.com/dms/image/v2/D4D22AQGb5tn8BH5BpQ/feedshare-shrink_2048_1536/B4DZw3IimuHMAk-/0/1770451512164?e=1775692800&v=beta&t=NP81NhAXphFWZ-n-NKaUWfQoqvsZtAIbXZm3oxdwuak",
-    label: "12K",
-    desc: "happy users",
+    img: "https://res.cloudinary.com/dvky83edw/image/upload/v1774099779/iot/941bed0c-6fac-43e1-9d20-afdc8ea9a1ea.png",
+   label: "Faculty–Student Interaction",
+   desc: "Faculty guiding student innovators through collaboration and ideas",
     size: "normal",
     showOnMobile: true,
   },
   {
     id: 6,
-    img: "/photo/13.JPG",
-    label: "Branching paths",
-    desc: "Explore multiple prompt directions with branching.",
+    img: "https://res.cloudinary.com/dvky83edw/image/upload/v1774100346/iot/chjz9ii3pn3cs0ebqemt.jpg",
+      label: "Tech Kurukshetra Fest",
+    desc: "Annual tech fest celebrating innovation and talent at the department",
     size: "tall",
     showOnMobile: false,
   },
   {
     id: 7,
-    img: "https://media.licdn.com/dms/image/v2/D4D22AQEJ7hxcW8F1Xg/feedshare-shrink_2048_1536/B4DZteu2u.H4Aw-/0/1766820907694?e=1775692800&v=beta&t=WBr_LHogDm3ukn1k2KhoFomuz7C5q7S7zv-VUYFtQyA",
-    label: "Keyword enhancer",
-    desc: "Boost your prompt precision with keywords.",
+    img: "https://res.cloudinary.com/dvky83edw/image/upload/v1774100086/iot/d878d790-3212-43bc-9bd7-e9cdb63c370b.png",
+    label: "Industry Leadership Visit",
+  desc: "T V Narendran engages with IEDC innovators at IIT Kharagpur Research Park",
     size: "tall",
     showOnMobile: false,
   },
   {
     id: 8,
-    img: "https://media.licdn.com/dms/image/v2/D5622AQG8yi3QSEE7EQ/feedshare-shrink_800/B56Znh9SR1G0Ag-/0/1760432564008?e=1775692800&v=beta&t=rSrhvdN96gWiSW3AcJ0FCD4Fnijl8BQanBVI5m1C9Vc",
-    label: "Prompt templates",
-    desc: "Use pre-made templates to jumpstart creativity.",
+    img: "https://res.cloudinary.com/dvky83edw/image/upload/v1774099839/iot/6be548f0-60d7-4556-a311-20d28ee10539.png",
+    label: "AI & Supercomputing Innovation",
+  desc: "SATYAMEBA drives breakthroughs in multi-GPU acceleration and computational science",
     size: "tall",
     showOnMobile: false,
   },
   {
     id: 9,
-    img: "/photo/15.JPG",
-    label: "Generate",
-    desc: "Start creating now",
+    img: "https://res.cloudinary.com/dvky83edw/image/upload/v1774100388/iot/qdu9vtbn3in9wvkucxxy.jpg",
+   label: "BUILDCON – Makers’ Fair",
+  desc: "48 teams showcasing innovation and entrepreneurship at IIT Kharagpur Research Park",
     size: "normal",
     showOnMobile: true,
   },
@@ -217,16 +217,14 @@ function BentoCard({
         className="absolute inset-0 bg-[#0c0c0c]/60 mix-blend-color pointer-events-none"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0c]/90 via-[#0c0c0c]/20 to-transparent flex flex-col justify-end p-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-        <span className="text-sky-300 text-xs font-semibold tracking-widest uppercase mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          {item.label}
-        </span>
+      
         <h3
-          className="text-white font-bold text-lg md:text-xl leading-tight"
+          className="text-white font-bold text-lg md:text-xl leading-tight group-hover:text-sky-300 transition-colors duration-300 "
           style={{ fontFamily: "'DM Sans', sans-serif" }}
         >
           {item.label}
         </h3>
-        <p className="text-white/60 text-sm mt-2 line-clamp-2 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+        <p className="text-white/80 text-sm mt-2 leading-relaxed transition-all duration-1000 delay-900 hidden group-hover:block ">
           {item.desc}
         </p>
       </div>

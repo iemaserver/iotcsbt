@@ -19,10 +19,10 @@ const FACULTY = [
   {
     sl: 1,
     name: "Dr. Sandip Mandal",
-    designation: "HOD (IoT, CS, BT) & Professor",
+    designation: "HOD of CSE (IoT, CS, BT) & Professor",
     email: "sandip.mandal@uem.edu.in",
     linkedin: "https://www.linkedin.com/search/results/all/?keywords=Sandip+Mandal+UEM",
-    photo: "/photo/1.jpg",
+    photo: "/photo/hod.jpg",
     message:
       '"Curiosity is the engine of achievement. We are here to ignite it in every student who walks through our doors. By bridging the gap between theoretical knowledge and hands-on application, we prepare our graduates to be industry leaders. Let us build a future where technology solves real-world challenges."',
   },
@@ -32,7 +32,7 @@ const FACULTY = [
     designation: "Assistant Professor",
     email: "shweta.saha@uem.edu.in",
     linkedin: "https://www.linkedin.com/search/results/all/?keywords=Sweta+Saha+UEM",
-    photo: "/photo/2.jpg",
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774123174/iot/faculty/lkxoyuxhfwc1lklygjpo.jpg",
     message:
       '"Every line of code you write is a step closer to changing the world. Keep building, keep exploring. Embrace the inevitable bugs and errors as learning opportunities rather than roadblocks. Your persistence today will shape the innovative software solutions of tomorrow."',
   },
@@ -42,7 +42,7 @@ const FACULTY = [
     designation: "Associate Professor",
     email: "siddhartha.roy@uem.edu.in",
     linkedin: "https://www.linkedin.com/search/results/all/?keywords=Siddhartha+Roy+UEM",
-    photo: "/photo/3.jpg",
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774123255/iot/faculty/sf82lahannlnw8gd79dp.jpg",
     message:
       '"Research is not just about finding answers - it is about asking the right questions with conviction. I encourage you to look beyond the textbook and challenge established paradigms. True academic excellence is born in the pursuit of the unknown and the desire to push boundaries."',
   },
@@ -52,7 +52,7 @@ const FACULTY = [
     designation: "Associate Professor",
     email: "arijeet.ghosh@uem.edu.in",
     linkedin: "https://www.linkedin.com/search/results/all/?keywords=Arijeet+Ghosh+UEM",
-    photo: "/photo/4.jpg",
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774123428/iot/faculty/44927b53-2efb-4b9b-82a7-82abae394fb3.png",
     message:
       '"Technology is most powerful when it serves humanity. Let that be the north star of your career. As you develop complex systems and IoT devices, always consider their societal impact. Responsible engineering is just as critical as technical proficiency."',
   },
@@ -62,7 +62,7 @@ const FACULTY = [
     designation: "Associate Professor",
     email: null,
     linkedin: "https://www.linkedin.com/search/results/all/?keywords=Avik+Kumar+Das+UEM",
-    photo: "/photo/5.jpg",
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774123617/iot/faculty/4b1a97c3-7ec0-4abb-beaa-975e02ddca7a.png",
     message:
       '"Learning never exhausts the mind - it only reveals how much more there is to discover. Stay hungry for knowledge and never settle for superficial understanding. The tech landscape evolves rapidly, and lifelong learning is your best tool for sustained success."',
   },
@@ -72,7 +72,7 @@ const FACULTY = [
     designation: "Assistant Professor",
     email: "rangon.sarkar@uem.edu.in",
     linkedin: "https://www.linkedin.com/search/results/all/?keywords=Rangon+Sarkar+UEM",
-    photo: "/photo/1.jpg",
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774125626/iot/faculty/wwl69ve9rrjc2kprofqp.jpg",
     message:
       '"Great engineers are not just problem solvers - they are problem finders. Train your eye to see what others miss. The most valuable skill you can cultivate is the ability to anticipate system failures before they occur. Design with resilience in mind."',
   },
@@ -82,7 +82,7 @@ const FACULTY = [
     designation: "Assistant Professor",
     email: "apurba.nandi@uem.edu.in",
     linkedin: "https://www.linkedin.com/search/results/all/?keywords=Apurba+Nandi+UEM",
-    photo: "/photo/2.jpg",
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774123987/iot/faculty/c2c77c23-20cc-4cd6-8788-82eacf0779fe.png",
     message:
       '"The best classroom is one where curiosity meets discipline. Come prepared and leave transformed. Success in computer science requires a delicate balance of creative thinking and rigorous logical structuring. Master both, and there are no limits to what you can create."',
   },
@@ -102,7 +102,7 @@ const FACULTY = [
     designation: "Associate Professor",
     email: "sangita.dutta@uem.edu.in",
     linkedin: "https://www.linkedin.com/search/results/all/?keywords=Sangita+Dutta+UEM",
-    photo: "/photo/4.jpg",
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774124304/iot/faculty/zjk1sdvuv7nogngftflg.jpg",
     message:
       '"Every student carries a spark. My role is simply to ensure it never goes out. I believe in fostering an environment where making mistakes is safely encouraged, provided you learn from them. Your unique perspective is your greatest asset in tech."',
   },
@@ -112,7 +112,7 @@ const FACULTY = [
     designation: "Assistant Professor",
     email: "sayantani.das@uem.edu.in",
     linkedin: "https://www.linkedin.com/search/results/all/?keywords=Sayantani+Das+UEM",
-    photo: "/photo/5.jpg",
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774124433/iot/faculty/1c4c16f5-5dc6-4096-831a-23b5c6473e50.png",
     message:
       '"Consistency and grit outperform talent every single time. Show up, put in the work. The path to mastering complex data structures or networking protocols isn\'t always linear. Celebrate the small victories and trust in the process of daily improvement."',
   },
@@ -122,7 +122,7 @@ const FACULTY = [
     designation: "Assistant Professor",
     email: "nitu.saha@uem.edu.in",
     linkedin: "https://www.linkedin.com/search/results/all/?keywords=Nitu+Saha+UEM",
-    photo: "/photo/1.jpg",
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774124724/iot/faculty/ilur4cwoztp5injijtak.jpg",
     message:
       '"Collaboration turns individual strengths into collective breakthroughs. Learn to build together. In the modern tech industry, lone wolves are rare; success is driven by diverse teams communicating effectively. Practice your soft skills as rigorously as your coding."',
   },
@@ -132,7 +132,7 @@ const FACULTY = [
     designation: "Associate Professor",
     email: "ahona.ghosh@uem.edu.in",
     linkedin: "https://www.linkedin.com/search/results/all/?keywords=Ahona+Ghosh+UEM",
-    photo: "/photo/2.jpg",
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774124862/iot/faculty/xgiwesp5gf00ubxn3q45.jpg",
     message:
       '"Data speaks to those who listen carefully. Let critical thinking be your most refined skill. In an age of information overload, the ability to parse noise and extract actionable insights is invaluable. Let logic and evidence guide your technical decisions."',
   },
@@ -142,7 +142,7 @@ const FACULTY = [
     designation: "Assistant Professor",
     email: "uddipan.ghosh@uem.edu.in",
     linkedin: "https://www.linkedin.com/search/results/all/?keywords=Uddipan+Ghosh+UEM",
-    photo: "/photo/3.jpg",
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774125184/iot/faculty/9c2d31d5-a96e-4978-9712-4dd3d3c6162c.png",
     message:
       '"The future belongs to those who dare to imagine it differently. Dream boldly, build precisely. We stand on the brink of unprecedented technological shifts in AI and IoT. It is your generation\'s responsibility to steer these advancements ethically and brilliantly."',
   },
@@ -233,9 +233,7 @@ function FacultyCard({ member, index, isFeatured = false }: { member: FacultyMem
         
         {/* Badges */}
         <div className={`flex flex-wrap items-center gap-2 mb-3 ${isFeatured ? 'justify-center md:justify-start' : 'justify-center'}`}>
-          <span className="inline-flex items-center rounded-full bg-sky-50 px-2.5 py-1 text-[11px] font-bold tracking-wide text-sky-700 border border-sky-100">
-            Sl. {member.sl}
-          </span>
+          
           <span className="inline-flex items-center rounded-full bg-slate-50 px-2.5 py-1 text-[11px] font-semibold text-slate-600 border border-slate-100">
             {member.designation}
           </span>
@@ -322,9 +320,7 @@ export default function FacultyPage() {
           >
             Meet Our Faculty
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-500 sm:text-base">
-            Structured according to the official hierarchy
-          </p>
+         
         </div>
 
         {/* HOD Section (Featured Card) */}

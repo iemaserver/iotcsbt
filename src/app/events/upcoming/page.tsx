@@ -18,6 +18,7 @@ type Event = {
 };
 
 const UPCOMING_EVENTS: Event[] = [
+  /*
   {
     id: "e1",
     name: "National IoT Innovation Meet 2026",
@@ -50,7 +51,7 @@ const UPCOMING_EVENTS: Event[] = [
     venue: "Lab Complex - Block B",
     image: "/photo/3.jpg",
     description: "A hands-on coding marathon. Bring your laptops, collaborate with peers, and make your first open-source contributions to real-world blockchain projects.",
-  },
+  },*/
 ];
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
@@ -75,6 +76,7 @@ function MapPinIcon({ className }: { className?: string }) {
 // ─── Main Component ───────────────────────────────────────────────────────────
 export default function UpcomingEventsPage() {
   const gridRef = useRef<HTMLDivElement>(null);
+  const hasUpcomingEvents = UPCOMING_EVENTS.length > 0;
 
   // Clean, fast entrance animation (No scrolling required)
   useEffect(() => {
@@ -107,24 +109,13 @@ export default function UpcomingEventsPage() {
     >
       <div className="max-w-7xl mx-auto py-4 sm:py-8">
         
-        {/* Department Title Header */}
-        <div className="mb-10 flex flex-col items-center text-center bg-slate-50/50 p-6 rounded-3xl border border-slate-200/60 shadow-sm">
-          <h2 className="text-sm md:text-base font-bold uppercase tracking-widest text-sky-600 mb-2">
-            Dept of Computer Science & Engineering
-          </h2>
-          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200">
-            <p className="text-xs sm:text-sm font-semibold text-slate-700 tracking-wide">
-              (Internet of Things, Cyber Security and Blockchain Technology)
-            </p>
-          </div>
-        </div>
-
+     
         {/* Events Grid */}
         <section 
           ref={gridRef}
           className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {UPCOMING_EVENTS.map((event) => (
+          {hasUpcomingEvents ? UPCOMING_EVENTS.map((event) => (
             <article 
               key={event.id} 
               className="group flex flex-col bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-sky-300 transition-all duration-300 overflow-hidden"
@@ -196,7 +187,13 @@ export default function UpcomingEventsPage() {
 
               </div>
             </article>
-          ))}
+          )) : (
+            <div className="sm:col-span-2 lg:col-span-3 rounded-3xl border border-slate-200 bg-white px-6 py-16 text-center shadow-sm">
+              <p className="text-base font-semibold text-slate-700 sm:text-lg">
+                No upcoming event currently.
+              </p>
+            </div>
+          )}
         </section>
 
       </div>

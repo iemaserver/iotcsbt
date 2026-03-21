@@ -35,7 +35,7 @@ export default function HodMessage() {
               start: "top 82%",
               once: true,
             },
-          }
+          },
         );
 
         // Photo slide in
@@ -53,7 +53,7 @@ export default function HodMessage() {
               start: "top 82%",
               once: true,
             },
-          }
+          },
         );
 
         // Content stagger
@@ -71,7 +71,7 @@ export default function HodMessage() {
               start: "top 82%",
               once: true,
             },
-          }
+          },
         );
 
         // Quote block
@@ -89,7 +89,7 @@ export default function HodMessage() {
               start: "top 82%",
               once: true,
             },
-          }
+          },
         );
 
         // Tagline fade
@@ -107,7 +107,7 @@ export default function HodMessage() {
               start: "top 82%",
               once: true,
             },
-          }
+          },
         );
       }, sectionRef);
     };
@@ -180,37 +180,108 @@ export default function HodMessage() {
       <section
         ref={sectionRef}
         className="hod-section hod-bg-pattern relative w-full overflow-hidden px-4 py-20 sm:px-8 lg:px-16"
-        style={{ background: "linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 50%, #f0f9ff 100%)" }}
+        style={{
+          background:
+            "linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 50%, #f0f9ff 100%)",
+        }}
       >
         {/* Decorative SVG top-left */}
         <svg
           aria-hidden="true"
           className="pointer-events-none absolute -top-10 -left-10 opacity-[0.07]"
-          width="320" height="320" viewBox="0 0 320 320"
+          width="320"
+          height="320"
+          viewBox="0 0 320 320"
         >
-          <circle cx="160" cy="160" r="140" stroke="#0ea5e9" strokeWidth="2" fill="none" />
-          <circle cx="160" cy="160" r="100" stroke="#38bdf8" strokeWidth="1.5" fill="none" />
-          <circle cx="160" cy="160" r="60" stroke="#7dd3fc" strokeWidth="1" fill="none" />
-          <line x1="20" y1="160" x2="300" y2="160" stroke="#0ea5e9" strokeWidth="1" />
-          <line x1="160" y1="20" x2="160" y2="300" stroke="#0ea5e9" strokeWidth="1" />
+          <circle
+            cx="160"
+            cy="160"
+            r="140"
+            stroke="#0ea5e9"
+            strokeWidth="2"
+            fill="none"
+          />
+          <circle
+            cx="160"
+            cy="160"
+            r="100"
+            stroke="#38bdf8"
+            strokeWidth="1.5"
+            fill="none"
+          />
+          <circle
+            cx="160"
+            cy="160"
+            r="60"
+            stroke="#7dd3fc"
+            strokeWidth="1"
+            fill="none"
+          />
+          <line
+            x1="20"
+            y1="160"
+            x2="300"
+            y2="160"
+            stroke="#0ea5e9"
+            strokeWidth="1"
+          />
+          <line
+            x1="160"
+            y1="20"
+            x2="160"
+            y2="300"
+            stroke="#0ea5e9"
+            strokeWidth="1"
+          />
         </svg>
 
         {/* Decorative SVG bottom-right */}
         <svg
           aria-hidden="true"
           className="pointer-events-none absolute -bottom-16 -right-16 opacity-[0.08]"
-          width="360" height="360" viewBox="0 0 360 360"
+          width="360"
+          height="360"
+          viewBox="0 0 360 360"
         >
-          <polygon points="180,20 340,280 20,280" stroke="#0ea5e9" strokeWidth="2" fill="none" />
-          <polygon points="180,60 310,270 50,270" stroke="#38bdf8" strokeWidth="1.2" fill="none" />
-          <polygon points="180,100 280,260 80,260" stroke="#7dd3fc" strokeWidth="0.8" fill="none" />
+          <polygon
+            points="180,20 340,280 20,280"
+            stroke="#0ea5e9"
+            strokeWidth="2"
+            fill="none"
+          />
+          <polygon
+            points="180,60 310,270 50,270"
+            stroke="#38bdf8"
+            strokeWidth="1.2"
+            fill="none"
+          />
+          <polygon
+            points="180,100 280,260 80,260"
+            stroke="#7dd3fc"
+            strokeWidth="0.8"
+            fill="none"
+          />
         </svg>
 
         {/* Floating dots */}
-        <svg aria-hidden="true" className="pointer-events-none absolute top-1/4 right-12 opacity-20" width="80" height="80" viewBox="0 0 80 80">
-          {[0,1,2,3].map(row => [0,1,2,3].map(col => (
-            <circle key={`${row}-${col}`} cx={col * 20 + 10} cy={row * 20 + 10} r="2.5" fill="#0ea5e9" />
-          )))}
+        <svg
+          aria-hidden="true"
+          className="pointer-events-none absolute top-1/4 right-12 opacity-20"
+          width="80"
+          height="80"
+          viewBox="0 0 80 80"
+        >
+          {[0, 1, 2, 3].map((row) =>
+            [0, 1, 2, 3].map((col) => (
+              <circle
+                key={`${row}-${col}`}
+                cx={col * 20 + 10}
+                cy={row * 20 + 10}
+                r="2.5"
+                fill="#0ea5e9"
+              />
+            )),
+          )}
         </svg>
 
         {/* Section label */}
@@ -223,7 +294,7 @@ export default function HodMessage() {
             <div className="hod-accent-bar h-px flex-1 max-w-12" />
           </div>
           <h2 className="hod-display mt-2 text-4xl font-black text-sky-950 sm:text-5xl">
-            Head of Department
+            Head of the Department
           </h2>
           <div className="hod-accent-bar mt-3 h-1 w-20 rounded-full" />
         </div>
@@ -238,7 +309,6 @@ export default function HodMessage() {
           <div className="hod-accent-bar absolute inset-x-0 top-0 h-0.75" />
 
           <div className="grid grid-cols-1 gap-0 md:grid-cols-[38%_1fr]">
-
             {/* === LEFT: Photo Column === */}
             <div
               ref={photoRef}
@@ -248,7 +318,10 @@ export default function HodMessage() {
               {/* Background wash */}
               <div
                 className="absolute inset-0"
-                style={{ background: "linear-gradient(160deg, #0c4a6e 0%, #075985 40%, #0369a1 100%)" }}
+                style={{
+                  background:
+                    "linear-gradient(160deg, #0c4a6e 0%, #075985 40%, #0369a1 100%)",
+                }}
               />
 
               {/* Photo frame */}
@@ -271,11 +344,23 @@ export default function HodMessage() {
               <div className="relative z-10 mb-0 w-full px-6 pb-8 text-center">
                 {/* Dept chip */}
                 <div className="hod-floating-badge dept-chip mx-auto mb-4 inline-flex items-center gap-2 rounded-full px-4 py-1.5">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-white/90">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-white/90"
+                  >
+                    <path
+                      d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                   <span className="hod-label text-[9px] font-semibold tracking-[0.22em] text-white uppercase">
-                    CSE IoT • CS BCT
+                    CSE IoT • CS • BT
                   </span>
                 </div>
 
@@ -285,7 +370,9 @@ export default function HodMessage() {
                 <p className="mt-1.5 text-xs font-medium tracking-wide text-sky-200">
                   Professor & Head of Department
                 </p>
-                <p className="text-[11px] text-sky-300/80 mt-0.5">UEM, Kolkata</p>
+                <p className="text-[11px] text-sky-300/80 mt-0.5">
+                  UEM, Kolkata
+                </p>
 
                 {/* Divider */}
                 <div className="mx-auto mt-4 h-px w-24 bg-sky-400/30" />
@@ -294,22 +381,45 @@ export default function HodMessage() {
                 <div className="mt-4 flex justify-center gap-3">
                   {/* Scholar icon */}
                   <div className="flex h-9 w-9 items-center justify-center rounded-full border border-sky-400/30 bg-sky-800/40 text-sky-300 transition-colors hover:bg-sky-700/50">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" />
                     </svg>
                   </div>
                   {/* Research icon */}
                   <div className="flex h-9 w-9 items-center justify-center rounded-full border border-sky-400/30 bg-sky-800/40 text-sky-300 transition-colors hover:bg-sky-700/50">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="11" cy="11" r="8"/>
-                      <path d="m21 21-4.35-4.35"/>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="m21 21-4.35-4.35" />
                     </svg>
                   </div>
                   {/* Email icon */}
                   <div className="flex h-9 w-9 items-center justify-center rounded-full border border-sky-400/30 bg-sky-800/40 text-sky-300 transition-colors hover:bg-sky-700/50">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect width="20" height="16" x="2" y="4" rx="2"/>
-                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <rect width="20" height="16" x="2" y="4" rx="2" />
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                     </svg>
                   </div>
                 </div>
@@ -326,7 +436,7 @@ export default function HodMessage() {
               <div className="flex items-center gap-3 mb-5">
                 <div className="hod-accent-bar h-0.5 w-8 rounded-full" />
                 <p className="hod-label text-[10px] font-semibold uppercase tracking-[0.3em] text-sky-600">
-                  Department of CSE IoT & CS BCT
+                  Department of CSE (IoT, CS, BT)
                 </p>
               </div>
 
@@ -339,7 +449,11 @@ export default function HodMessage() {
 
               {/* Specialisation badges */}
               <div className="mt-5 flex flex-wrap gap-2">
-                {["Internet of Things", "Cyber Security", "Blockchain Technology"].map((tag) => (
+                {[
+                  "Internet of Things",
+                  "Cyber Security",
+                  "Blockchain Technology",
+                ].map((tag) => (
                   <span
                     key={tag}
                     className="inline-flex items-center gap-1.5 rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-[11px] font-semibold text-sky-700"
@@ -359,40 +473,108 @@ export default function HodMessage() {
                 style={{ opacity: 0 }}
               >
                 {/* Open-quote SVG */}
-                <svg aria-hidden="true" width="40" height="32" viewBox="0 0 40 32" fill="none" className="mb-3 text-sky-400">
-                  <path d="M0 32V20C0 12.8 4.26667 6.93333 12.8 2.4L16 8C12.2667 10.1333 10 12.8 9.6 16H16V32H0ZM24 32V20C24 12.8 28.2667 6.93333 36.8 2.4L40 8C36.2667 10.1333 34 12.8 33.6 16H40V32H24Z" fill="currentColor" opacity="0.6"/>
+                <svg
+                  aria-hidden="true"
+                  width="40"
+                  height="32"
+                  viewBox="0 0 40 32"
+                  fill="none"
+                  className="mb-3 text-sky-400"
+                >
+                  <path
+                    d="M0 32V20C0 12.8 4.26667 6.93333 12.8 2.4L16 8C12.2667 10.1333 10 12.8 9.6 16H16V32H0ZM24 32V20C24 12.8 28.2667 6.93333 36.8 2.4L40 8C36.2667 10.1333 34 12.8 33.6 16H40V32H24Z"
+                    fill="currentColor"
+                    opacity="0.6"
+                  />
                 </svg>
 
                 <p className="text-[1.02rem] leading-[1.85] text-slate-700 sm:text-[1.06rem]">
                   It is my immense pleasure to welcome you to the Department of
-                  <strong className="font-semibold text-sky-800"> Computer Science Engineering with IoT (CSE IoT) </strong>
-                  and
-                  <strong className="font-semibold text-sky-800"> Computer Science with BCT (CS BCT)</strong>.
-                  Our department champions outcome-based education, hands-on laboratory work, and a culture of
-                  relentless curiosity. We prepare students not just as engineers, but as innovators who can
-                  shape the digital future.
+                  <strong className="font-semibold text-sky-800">
+                    {" "}
+                    Computer Science Engineering with specializations in
+                    Internet of Things, Cyber Security, and Blockchain
+                    Technology.
+                  </strong>{" "}
+                  Our department is committed to outcome-based education,
+                  hands-on learning, and fostering a spirit of continuous
+                  curiosity. We strive to nurture students not only as skilled
+                  engineers but also as forward-thinking innovators capable of
+                  shaping the digital future.
                 </p>
 
                 <p className="mt-4 text-[1.02rem] leading-[1.85] text-slate-700 sm:text-[1.06rem]">
-                  Through specialised tracks in <strong className="font-medium text-sky-700">Internet of Things</strong>,{" "}
-                  <strong className="font-medium text-sky-700">Cyber Security</strong>, and{" "}
-                  <strong className="font-medium text-sky-700">Blockchain Technology</strong>, we equip
-                  graduates with both theoretical depth and real-world problem-solving ability. Research seminars,
-                  industry collaborations, and startup initiatives further enrich the academic journey. I warmly
-                  invite every learner to explore, build, and lead with purpose.
+                  Through focused academic tracks in
+                  <strong className="font-medium text-sky-700">
+                    {" "}
+                    Internet of Things
+                  </strong>
+                  ,{" "}
+                  <strong className="font-medium text-sky-700">
+                    {" "}
+                    Cyber Security
+                  </strong>
+                  , and{" "}
+                  <strong className="font-medium text-sky-700">
+                    {" "}
+                    Blockchain Technology
+                  </strong>
+                  , we equip our students with strong theoretical foundations
+                  alongside practical problem-solving skills. Research-driven
+                  learning, industry collaborations, and startup-oriented
+                  initiatives further enrich their academic experience. I warmly
+                  encourage every learner to explore new ideas, build meaningful
+                  solutions, and lead with purpose.
                 </p>
 
                 {/* Signature line */}
-                <div className="mt-6 flex items-center gap-4 border-t border-sky-200/60 pt-5">
-                  <div>
-                    <p className="hod-display text-base font-bold text-sky-900">Prof. Dr. Sandip Mandal</p>
-                    <p className="mt-0.5 text-xs text-sky-600">Professor & HOD — CSE IoT & CS BCT, UEM Kolkata</p>
+                <div className="mt-6">
+                  {/* HOD Signature Image */}
+                  <div className="mb-1 flex justify-start pr-1">
+                    <Image
+                      src="/signature.png"
+                      alt="HOD Signature"
+                      className="h-12 w-auto object-contain "
+                      width={160}
+                      height={40}
+                    />
                   </div>
-                  {/* Decorative signature squiggle */}
-                  <svg className="ml-auto shrink-0 text-sky-300" width="72" height="28" viewBox="0 0 72 28" fill="none">
-                    <path d="M4 22 Q18 4 32 14 Q46 24 60 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
-                    <path d="M12 26 Q26 16 36 20 Q48 24 60 18" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.5"/>
-                  </svg>
+
+                  <div className="flex items-center gap-4 border-t border-sky-200/60  mt-1">
+                    <div>
+                      <p className="hod-display text-base font-bold text-sky-900">
+                        Prof. Dr. Sandip Mandal
+                      </p>
+                      <p className="mt-0.5 text-xs text-sky-600">
+                        HOD — CSE IoT, CS & BT, UEM Kolkata
+                      </p>
+                    </div>
+
+                    {/* Decorative signature squiggle */}
+                    <svg
+                      className="ml-auto shrink-0 text-sky-300"
+                      width="72"
+                      height="28"
+                      viewBox="0 0 72 28"
+                      fill="none"
+                    >
+                      <path
+                        d="M4 22 Q18 4 32 14 Q46 24 60 8"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        fill="none"
+                      />
+                      <path
+                        d="M12 26 Q26 16 36 20 Q48 24 60 18"
+                        stroke="currentColor"
+                        strokeWidth="1.2"
+                        strokeLinecap="round"
+                        fill="none"
+                        opacity="0.5"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
 

@@ -18,58 +18,58 @@ interface LabSlide {
 const LAB_SLIDES: LabSlide[] = [
   {
     id: 1,
-    label: "IoT Systems Lab",
-    category: "Embedded Intelligence · Block A",
-    description:
-      "Design and deploy connected systems using sensors, gateways, and edge dashboards for smart automation use-cases.",
-    year: "2024",
-    color: "#c9f53b",
+   label: "Hackathon Winner",
+  category: "JPMorgan Chase CFG 2025 · Social Impact",
+  description:
+    "Built award-winning solutions like FootPathshala at JPMorgan Chase Code for Good 2025 Hackathon — featuring geo-tagged face attendance, ML-powered assessments, real-time dashboards, and scalable automation for social impact.",
+  year: "2025",
+  color: "#c9f53b",
     imageUrl:
-      "https://media.licdn.com/dms/image/v2/D4E22AQF_ZIDTTAd6Uw/feedshare-shrink_2048_1536/B4EZxsPPxUGgAk-/0/1771342462457?e=1775692800&v=beta&t=qTjrsB7H_5WVuTcnNfBOdyGF960S18YgR7o8QdpZDHg",
+      "https://res.cloudinary.com/dvky83edw/image/upload/v1774104001/iot/08182265-1d07-4b60-ac81-72aed66b0956.png",
   },
   {
     id: 2,
-    label: "Cyber Security Lab",
-    category: "Cyber Range · Secure Network Zone",
-    description:
-      "Practice ethical hacking, digital forensics, and intrusion analysis with real-time security monitoring toolchains.",
-    year: "2024",
-    color: "#a8d62a",
+     label: "SATYAMEBA Supercomputing Initiative",
+  category: "UEM Kolkata · HPC & AI Research",
+  description:
+    "Showcasing the SATYAMEBA 2025 initiative — a collaborative effort by students, faculty, and leadership to advance AI acceleration, multi-GPU architectures, and high-performance computing, driving next-generation innovation in supercomputing and research.",
+  year: "2025",
+  color: "#38bdf8",
     imageUrl:
-      "https://media.licdn.com/dms/image/v2/D5622AQHliEP-0Tk3Iw/feedshare-shrink_1280/B56Znh9SRtG4As-/0/1760432564009?e=1775692800&v=beta&t=BCzCD2hG1eeMpFAsqI6qroR64qGl-AYtkwBszhFWvGo",
+      "https://res.cloudinary.com/dvky83edw/image/upload/v1774103669/iot/e7aa4373-5920-499d-af38-7d109e14ecef.png",
   },
   {
     id: 3,
-    label: "Blockchain Innovation Lab",
-    category: "Decentralized Apps · Web3 Studio",
-    description:
-      "Build smart contracts and decentralized applications with secure transaction design and trust-driven architectures.",
-    year: "2023",
-    color: "#c9f53b",
+   label: "AI for Smart Mining",
+  category: "CMPDI Hackathon 2025 · Runner-Up",
+  description:
+    "Awarded Runner-Up at the Ministry of Coal’s CMPDI R&D Hackathon 2025 for developing an intelligent monitoring and control system for ventilation and fire safety in underground coal mines, competing with top institutions like IITs, NITs, and industry leaders.",
+  year: "2025",
+  color: "#f59e0b",
     imageUrl:
-      "https://media.licdn.com/dms/image/v2/D5622AQHQ3QA5aldF-Q/feedshare-shrink_2048_1536/B56ZsOMfO5H8A0-/0/1765469714698?e=1775692800&v=beta&t=kqmOTbcpj4de-r5HkQGpwQ1FU8vjGoqYqW1lhOj0hyo",
+      "https://res.cloudinary.com/dvky83edw/image/upload/v1774103610/iot/2839f291-11e1-47bf-bf72-c56c2bc3b861.png",
   },
   {
     id: 4,
-    label: "AI & Data Lab",
-    category: "Machine Intelligence · Analytics Hub",
-    description:
-      "Train, evaluate, and deploy AI models for vision, NLP, and predictive analytics using accelerated compute resources.",
-    year: "2024",
-    color: "#a8d62a",
+     label: "KrishiDhan AI System",
+  category: "Square Hacks 2025 Finalist · AgriTech",
+  description:
+    "Top 10 finalist among 650+ teams at Square Hacks 2025, IIT Delhi. Built an offline-first AI system on Raspberry Pi 5 for soil health assessment, featuring Explainable AI (XAI) to deliver transparent, actionable insights for farmers, even in low-connectivity environments.",
+  year: "2025",
+  color: "#22c55e",
     imageUrl:
-      "https://media.licdn.com/dms/image/v2/D4D22AQGN70vPG5n9sA/feedshare-shrink_2048_1536/B4DZw3KhslI4Ak-/0/1770452032829?e=1775692800&v=beta&t=OLhrXe3vfQc4Ra0987L2uJUDLYbT00SQe_f6KMSfm4E",
+      "https://res.cloudinary.com/dvky83edw/image/upload/v1774103994/iot/849c54cf-aa80-43bb-aa47-c488c063c8e3.png",
   },
   {
     id: 5,
-    label: "Cloud & DevOps Lab",
-    category: "Scalable Systems · Deployment Center",
-    description:
-      "Implement CI/CD, containerized microservices, and cloud-native workflows for production-grade software systems.",
-    year: "2024",
-    color: "#c9f53b",
+    label: "CtrlS Datacenter Visit",
+  category: "Industrial Visit · Cloud & Infrastructure",
+  description:
+    "Hands-on industrial visit to CtrlS Datacenters at Bengal Silicon Valley, Kolkata, exploring Tier-4 architecture, cloud infrastructure, cybersecurity, and IoT systems with real-world insights from industry experts.",
+  year: "2025",
+  color: "#6366f1",
     imageUrl:
-      "https://media.licdn.com/dms/image/v2/D4D22AQHhqYvu9zdN8A/feedshare-shrink_2048_1536/B4DZw3FGnsGQAk-/0/1770450610877?e=1775692800&v=beta&t=JUs1PyYxUlNaczBiGMtwDjHtTYxCtr9lZBTPJzq9ldY",
+      "https://res.cloudinary.com/dvky83edw/image/upload/v1774103581/iot/bd4c75a6-78e5-42f7-90ab-4627e10f9eef.png",
   },
 ];
 //───────────────────────────────────────────────────
@@ -284,18 +284,58 @@ export default function LabCarousel() {
         }}
       />
       {/* Ambient gradient blobs */}
-      <div className="absolute pointer-events-none" style={{ top: "10%", left: "-6%", width: 460, height: 460, borderRadius: "50%", background: "radial-gradient(circle, rgba(201,245,59,0.08) 0%, transparent 65%)", filter: "blur(2px)", zIndex: 0 }} />
-      <div className="absolute pointer-events-none" style={{ top: "30%", right: "-5%", width: 380, height: 380, borderRadius: "50%", background: "radial-gradient(circle, rgba(124,58,237,0.09) 0%, transparent 65%)", filter: "blur(2px)", zIndex: 0 }} />
-      <div className="absolute pointer-events-none" style={{ bottom: "10%", left: "30%", width: 320, height: 320, borderRadius: "50%", background: "radial-gradient(circle, rgba(219,39,119,0.07) 0%, transparent 65%)", filter: "blur(2px)", zIndex: 0 }} />
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: "10%",
+          left: "-6%",
+          width: 460,
+          height: 460,
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(201,245,59,0.08) 0%, transparent 65%)",
+          filter: "blur(2px)",
+          zIndex: 0,
+        }}
+      />
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: "30%",
+          right: "-5%",
+          width: 380,
+          height: 380,
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(124,58,237,0.09) 0%, transparent 65%)",
+          filter: "blur(2px)",
+          zIndex: 0,
+        }}
+      />
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          bottom: "10%",
+          left: "30%",
+          width: 320,
+          height: 320,
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(219,39,119,0.07) 0%, transparent 65%)",
+          filter: "blur(2px)",
+          zIndex: 0,
+        }}
+      />
 
       {/* ── Section label ─────────────────────────────────────────────────── */}
       <div className="relative z-10 max-w-[1400px] mx-auto px-8 sm:px-12 lg:px-20  flex items-center gap-4">
         <div className="h-px flex-1 bg-slate-300/80" />
-        <span
-          className="text-[20px] font-bold tracking-[0.4em] uppercase py-10 text-sky-700"
-     
-        >
-          ◆ Research Gallery ◆
+        <span className="text-[20px] font-bold tracking-[0.4em] uppercase py-10 text-slate-600 font-mono flex flex-col items-center gap-2">
+      
+          
+           ◆ Moments of Excellence ◆
+    
+       
         </span>
         <div className="h-px flex-1 bg-slate-300/80" />
       </div>
@@ -336,10 +376,10 @@ export default function LabCarousel() {
               />
               {/* Left-heavy vignette so text stays readable */}
               <div
-                className="absolute inset-0"
+                className="absolute inset-0 hidden md:block"
                 style={{
                   background:
-                    "linear-gradient(to right, rgba(240,249,255,0.58) 0%, rgba(240,249,255,0.25) 48%, rgba(240,249,255,0.05) 100%)",
+                    "linear-gradient(to right, rgba(200,235,255,1) 0%, rgba(225,245,255,0.9) 10%,rgba(255,255,255,0.6) 20%,rgba(255,255,255,0) 50%)",
                 }}
               />
             </div>
@@ -361,7 +401,7 @@ export default function LabCarousel() {
               style={{ backgroundColor: slide.color }}
             />
             <span className="text-[10px] tracking-[0.3em] uppercase text-slate-600 font-mono">
-             CSE(IoT, CS, BCT)
+              CSE(IoT, CS, BT)
             </span>
           </div>
           <span
@@ -383,23 +423,17 @@ export default function LabCarousel() {
         </div>
 
         {/* Main content */}
-        <div className="absolute inset-0 z-30 flex flex-col justify-end pointer-events-none px-10 md:px-20 lg:px-24 pb-20">
+        <div className="absolute inset-0 z-30 flex-col justify-end pointer-events-none px-10 md:px-20 lg:px-24 pb-20 hidden md:flex">
           <div ref={metaRef} className="mb-4 flex items-center gap-4">
-            <div
-              className="h-px w-12 flex-shrink-0 bg-sky-800"
-             
-            />
-            <span
-              className="text-[10px] text-black tracking-[0.3em] uppercase font-semibold font-mono"
-             
-            >
+            <div className="h-px w-12 flex-shrink-0 bg-sky-800" />
+            <span className="text-[10px] text-black tracking-[0.3em] uppercase font-semibold font-mono">
               {slide.category}
             </span>
           </div>
 
           <h2
             ref={titleRef}
-            className="text-5xl md:text-7xl xl:text-8xl font-bold text-slate-900 leading-none mb-5"
+            className="text-5xl md:text-6xl xl:text-7xl font-bold text-sky-900 leading-none mb-5"
             style={{
               fontFamily: "'Bebas Neue','Arial Narrow',sans-serif",
               letterSpacing: "0.02em",
@@ -410,7 +444,7 @@ export default function LabCarousel() {
 
           <p
             ref={descRef}
-            className="max-w-lg text-sm md:text-base text-slate-700 leading-relaxed mb-6"
+            className="max-w-lg text-sm md:text-base text-black leading-relaxed mb-6"
           >
             {slide.description}
           </p>
@@ -421,7 +455,6 @@ export default function LabCarousel() {
               <span
                 ref={counterRef}
                 className="text-2xl font-bold tabular-nums text-sky-700"
-              
               >
                 {String(current + 1).padStart(2, "0")}
               </span>

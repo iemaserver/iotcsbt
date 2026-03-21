@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Merriweather, Manrope, Source_Code_Pro, Playfair_Display } from "next/font/google";
+import { Merriweather, Manrope, Source_Code_Pro } from "next/font/google";
 import "./globals.css";
 
 const merriweather = Merriweather({
@@ -8,12 +8,6 @@ const merriweather = Merriweather({
   display: "swap",
   weight: ["400", "700", "900"],
 });
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
-})
 const sansFont = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
@@ -39,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${playfairDisplay.className} ${merriweather.variable} ${sansFont.variable} ${monoFont.variable} ${playfairDisplay.variable} antialiased`}>
+      <body className={` ${merriweather.variable} ${sansFont.variable} ${monoFont.variable} ${merriweather.className}  antialiased`}>
         {children}
       </body>
     </html>

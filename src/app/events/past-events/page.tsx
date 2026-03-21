@@ -11,63 +11,51 @@ const PAST_EVENTS = [
     name: "Tech Kurukshetra 2025",
     date: "February 2025",
     type: "Tech Fest",
-    report: "Comprehensive event report PDF submitted to departmental records.",
-    photo: "/photo/1.jpg",
+   
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774100346/iot/chjz9ii3pn3cs0ebqemt.jpg",
   },
   {
     id: "pe2",
-    name: "Innovation Demo Day",
-    date: "December 2024",
-    type: "Showcase",
-    report: "Industry panel evaluation report and startup showcase summary available.",
-    photo: "/photo/4.jpg",
+    name: "BuildCon 2026",
+    date: "February 2026",
+    type: "Start-up Pitch Competition",
+  
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774100388/iot/qdu9vtbn3in9wvkucxxy.jpg",
   },
   {
     id: "pe3",
-    name: "AI Research Colloquium",
-    date: "October 2024",
-    type: "Colloquium",
-    report: "Proceedings and presentation abstracts archived as PDF.",
-    photo: "/photo/5.jpg",
+    name: "Cyber Odyssey 2025",
+    date: "October 2025",
+    type: "Competition",
+    
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774068989/iot/i6fesgigd7mcwixnsu8n.jpg",
   },
   {
     id: "pe4",
-    name: "Web3 Developers Meetup",
-    date: "August 2024",
-    type: "Meetup",
-    report: "Event photo gallery and smart contract deployment logs compiled.",
-    photo: "/photo/2.jpg",
+    name: "Guest Lecture",
+    date: "August 2025",
+    type: "Seminar",
+   
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774069066/iot/goyciqtvbymwfse7q5ik.jpg",
   },
   {
     id: "pe5",
-    name: "Cyber Security Hackathon",
-    date: "June 2024",
-    type: "Hackathon",
-    report: "Vulnerability assessment reports and winning team source codes archived.",
-    photo: "/photo/3.jpg",
+    name: "Poster Competition",
+    date: "March 2026",
+    type: "Competition",
+    
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774120807/iot/5d887295-361f-4774-a4a1-8e2b9b3160ed.png",
   },
   {
     id: "pe6",
-    name: "IoT Smart City Workshop",
-    date: "April 2024",
-    type: "Workshop",
-    report: "Sensor network deployment architecture PDFs and participant certificates.",
-    photo: "/photo/1.jpg",
+    name: "Debate Competition",
+    date: "March 2026",
+    type: "Competition",
+ 
+    photo: "https://res.cloudinary.com/dvky83edw/image/upload/v1774120801/iot/85953946-b8ac-43c2-b866-b183e3d987de.png",
   },
 ];
 
-// ─── Minimal Icons ────────────────────────────────────────────────────────────
-function DocumentIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className ?? "w-3.5 h-3.5"}>
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-      <polyline points="14 2 14 8 20 8" />
-      <line x1="16" y1="13" x2="8" y2="13" />
-      <line x1="16" y1="17" x2="8" y2="17" />
-      <polyline points="10 9 9 9 8 9" />
-    </svg>
-  );
-}
 
 function CalendarIcon({ className }: { className?: string }) {
   return (
@@ -112,7 +100,7 @@ export default function PastEventsPage() {
   return (
     <DepartmentPage
       title="Past Events Archive"
-      subtitle="Browse previous department events, with photo highlights and comprehensive report documents."
+      subtitle="Browse previous department events, with photo highlights."
     >
       <div className="max-w-7xl mx-auto py-8" ref={containerRef}>
         
@@ -163,14 +151,7 @@ export default function PastEventsPage() {
                     {event.name}
                   </h2>
 
-                  <div className={`overflow-hidden transition-all duration-500 ${isLarge ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0 group-hover:max-h-24 group-hover:opacity-100 group-hover:mt-2'}`}>
-                    <p className="text-sm text-slate-300 line-clamp-2 leading-relaxed mb-4">
-                      {event.report}
-                    </p>
-                    <button className="inline-flex items-center gap-2 rounded-xl bg-sky-500/20 backdrop-blur-md border border-sky-400/30 px-4 py-2 text-xs font-semibold text-sky-100 transition-colors hover:bg-sky-500/40 hover:text-white">
-                      <DocumentIcon /> View Report PDF
-                    </button>
-                  </div>
+                  
                 </div>
               </article>
             );
@@ -222,15 +203,9 @@ export default function PastEventsPage() {
                       <span className="text-xs font-medium">{event.date}</span>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-2 mb-4">
-                      {event.report}
-                    </p>
+                  
 
-                    <div className="mt-auto">
-                      <button className="inline-flex items-center gap-1.5 text-sm font-semibold text-sky-600 hover:text-sky-800 transition-colors">
-                        <DocumentIcon /> Open Report
-                      </button>
-                    </div>
+                  
                   </div>
                 </article>
               ))}
