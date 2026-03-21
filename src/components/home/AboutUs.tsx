@@ -58,7 +58,7 @@ const bentoItems = [
   },
   {
     id: 6,
-    img: "/photo/13.jpg",
+    img: "/photo/13.JPG",
     label: "Branching paths",
     desc: "Explore multiple prompt directions with branching.",
     size: "tall",
@@ -82,7 +82,7 @@ const bentoItems = [
   },
   {
     id: 9,
-    img: "/photo/15.jpg",
+    img: "/photo/15.JPG",
     label: "Generate",
     desc: "Start creating now",
     size: "normal",
