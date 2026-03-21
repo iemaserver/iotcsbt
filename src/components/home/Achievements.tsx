@@ -11,41 +11,41 @@ gsap.registerPlugin(ScrollTrigger);
 ───────────────────────────────────────────── */
 const stats = [
   {
-    value: "500",
+    value: "320",
     suffix: "+",
-    label: "Research Papers",
-    sub: "Top-tier journals & conferences",
+    label: "Publications",
+    sub: "IoT, AI, Security and Blockchain research",
   },
   {
-    value: "50",
+    value: "35",
     suffix: "+",
     label: "Patents Filed",
-    sub: "IP protected innovations",
+    sub: "Applied innovation and IP development",
   },
   {
-    value: "10",
+    value: "4",
     suffix: "M+",
     prefix: "$",
     label: "Research Grants",
-    sub: "Govt & private funding",
+    sub: "Government and industry funded projects",
   },
   {
-    value: "100",
+    value: "60",
     suffix: "+",
-    label: "Global Partners",
-    sub: "Universities & tech giants",
+    label: "Academic Partners",
+    sub: "Universities, labs and innovation networks",
   },
   {
-    value: "25",
+    value: "15",
     suffix: "+",
-    label: "Years Active",
-    sub: "Pioneering since 1999",
+    label: "Industry Collaborations",
+    sub: "Hackathons, internships and live projects",
   },
   {
-    value: "300",
+    value: "120",
     suffix: "+",
-    label: "PhD Graduates",
-    sub: "Alumni shaping the world",
+    label: "Student Innovations",
+    sub: "Prototype solutions built in department labs",
   },
 ];
 
@@ -342,8 +342,8 @@ export default function ResearchGlory() {
       className="relative w-full overflow-hidden"
       style={{
         fontFamily: "'Syne', sans-serif",
-        color: "#f0ede6",
-        background: "#080808",
+        color: "#0f172a",
+        background: "#f8fafc",
       }}
     >
       {/* grain */}
@@ -429,11 +429,11 @@ export default function ResearchGlory() {
               fontSize: "11px",
               letterSpacing: "0.4em",
               textTransform: "uppercase",
-              color: "#c9f53b",
               marginBottom: "24px",
             }}
+            className="text-sky-600"
           >
-            — Research & Glory
+            — Department Impact
           </p>
           <h2
             ref={headingRef}
@@ -446,7 +446,7 @@ export default function ResearchGlory() {
               overflow: "hidden",
             }}
           >
-            {["Decades", "of", "Relentless"].map((w, i) => (
+            {["CSE", "Innovation", "in", "Action"].map((w, i) => (
               <span
                 key={i}
                 className="word"
@@ -457,24 +457,14 @@ export default function ResearchGlory() {
                   willChange: "transform",
                 }}
               >
-                {i === 2 ? (
-                  <em style={{ fontStyle: "italic", color: "#c9f53b" }}>{w}</em>
+                {i === 3 ? (
+                  <em style={{ fontStyle: "italic"}} className="text-sky-700">{w}</em>
                 ) : (
                   w
                 )}
               </span>
             ))}
-            <br />
-            <span
-              className="word"
-              style={{
-                display: "inline-block",
-                opacity: 0,
-                willChange: "transform",
-              }}
-            >
-              Innovation
-            </span>
+          
           </h2>
           <div
             ref={lineRef}
@@ -493,9 +483,9 @@ export default function ResearchGlory() {
           className="stats-grid"
           style={{
             gap: "1px",
-            background: "rgba(255,255,255,0.05)",
-            borderTop: "1px solid rgba(255,255,255,0.06)",
-            borderBottom: "1px solid rgba(255,255,255,0.06)",
+            background: "rgba(148,163,184,0.3)",
+            borderTop: "1px solid rgba(148,163,184,0.45)",
+            borderBottom: "1px solid rgba(148,163,184,0.45)",
             perspective: "1000px",
           }}
         >
@@ -504,7 +494,7 @@ export default function ResearchGlory() {
               key={i}
               className="stat-card"
               style={{
-                background: "#080808",
+                background: "#eaf6ff",
                 padding: "clamp(20px,4vw,48px) clamp(16px,3vw,32px)",
                 position: "relative",
                 cursor: "default",
@@ -514,27 +504,27 @@ export default function ResearchGlory() {
               }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLDivElement).style.background =
-                  "#0f0f0f";
+                  "#dbeafe";
                 gsap.to(e.currentTarget.querySelector(".sa"), {
                   scaleY: 1,
                   duration: 0.4,
                   ease: "power2.out",
                 });
                 gsap.to(e.currentTarget.querySelector(".sn"), {
-                  color: "#c9f53b",
+                  color: "#0284c7",
                   duration: 0.3,
                 });
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLDivElement).style.background =
-                  "#080808";
+                  "#eaf6ff";
                 gsap.to(e.currentTarget.querySelector(".sa"), {
                   scaleY: 0,
                   duration: 0.4,
                   ease: "power2.in",
                 });
                 gsap.to(e.currentTarget.querySelector(".sn"), {
-                  color: "#f0ede6",
+                  color: "#0f172a",
                   duration: 0.3,
                 });
               }}
@@ -560,6 +550,7 @@ export default function ResearchGlory() {
                   letterSpacing: "-0.04em",
                   lineHeight: 1,
                   marginBottom: "12px",
+                  color: "#0f172a",
                   transition: "color 0.3s",
                 }}
               >
@@ -581,7 +572,7 @@ export default function ResearchGlory() {
               <div
                 style={{
                   fontSize: "12px",
-                  color: "rgba(240,237,230,0.35)",
+                  color: "rgba(71,85,105,0.9)",
                   lineHeight: 1.5,
                 }}
               >
@@ -591,268 +582,7 @@ export default function ResearchGlory() {
           ))}
         </div>
 
-        {/* ── COVERFLOW CAROUSEL ── */}
-        <div
-          ref={carouselRef}
-          style={{ padding: "clamp(48px,8vw,96px) 0 80px" }}
-        >
-          {/* header */}
-          <div
-            className="carousel-header"
-            style={{ padding: "0 6vw", marginBottom: "56px" }}
-          >
-            <div>
-              <p
-                style={{
-                  fontFamily: "monospace",
-                  fontSize: "11px",
-                  letterSpacing: "0.4em",
-                  textTransform: "uppercase",
-                  color: "#c9f53b",
-                  marginBottom: "12px",
-                }}
-              >
-                — Visual Archive
-              </p>
-              <h3
-                style={{
-                  fontSize: "clamp(1.6rem, 3vw, 2.6rem)",
-                  fontWeight: 700,
-                  letterSpacing: "-0.03em",
-                  margin: 0,
-                }}
-              >
-                Labs & Breakthroughs
-              </h3>
-            </div>
-            <div style={{ display: "flex", gap: "12px" }}>
-              {(["←", "→"] as const).map((arrow, dir) => (
-                <button
-                  key={dir}
-                  onClick={() => navigate(dir === 0 ? -1 : 1)}
-                  style={{
-                    width: "52px",
-                    height: "52px",
-                    borderRadius: "50%",
-                    border: "1px solid rgba(255,255,255,0.15)",
-                    background: "transparent",
-                    color: "#f0ede6",
-                    fontSize: "18px",
-                    cursor: "pointer",
-                    transition: "all 0.25s",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                  onMouseEnter={(e) => {
-                    const el = e.currentTarget;
-                    el.style.background = "#c9f53b";
-                    el.style.color = "#080808";
-                    el.style.borderColor = "#c9f53b";
-                  }}
-                  onMouseLeave={(e) => {
-                    const el = e.currentTarget;
-                    el.style.background = "transparent";
-                    el.style.color = "#f0ede6";
-                    el.style.borderColor = "rgba(255,255,255,0.15)";
-                  }}
-                >
-                  {arrow}
-                </button>
-              ))}
-            </div>
-          </div>
 
-          {/* coverflow viewport */}
-          <div
-            ref={viewportRef}
-            style={{
-              position: "relative",
-              height: `${SLIDE_H + 40}px`,
-              overflow: "hidden",
-              cursor: "grab",
-              perspective: "1200px",
-              perspectiveOrigin: "50% 50%",
-            }}
-            onPointerDown={onPointerDown}
-            onPointerMove={onPointerMove}
-            onPointerUp={onPointerUp}
-            onPointerLeave={onPointerUp}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-          >
-            {/* edge fade masks */}
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                zIndex: 10,
-                pointerEvents: "none",
-                background:
-                  "linear-gradient(90deg, #080808 0%, transparent 20%, transparent 80%, #080808 100%)",
-              }}
-            />
-
-            {SLIDES.map((slide, i) => {
-              const realIndex = i % N;
-              return (
-                <div
-                  key={`${slide.id}-${i}`}
-                  ref={(el) => {
-                    cardRefs.current[i] = el;
-                  }}
-                  onClick={() => {
-                    const delta = i - virtualIdx.current;
-                    if (delta !== 0) navigate(Math.sign(delta));
-                  }}
-                  style={{
-                    position: "absolute",
-                    top: "20px",
-                    left: 0,
-                    width: `${SLIDE_W}px`,
-                    height: `${SLIDE_H}px`,
-                    borderRadius: "18px",
-                    overflow: "hidden",
-                    cursor: realIndex === activeReal ? "default" : "pointer",
-                    willChange: "transform, filter, opacity",
-                    transformStyle: "preserve-3d",
-                    opacity: 0,
-                  }}
-                >
-                  {/* image */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      inset: "-4px",
-                      backgroundImage: `url(${slide.img})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    }}
-                  />
-                  {/* overlay */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      inset: 0,
-                      background:
-                        "linear-gradient(170deg, rgba(0,0,0,0.0) 30%, rgba(8,8,8,0.9) 100%)",
-                    }}
-                  />
-
-                  {/* year badge */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "16px",
-                      right: "16px",
-                      fontFamily: "monospace",
-                      fontSize: "11px",
-                      letterSpacing: "0.15em",
-                      background: "rgba(255,255,255,0.1)",
-                      backdropFilter: "blur(10px)",
-                      border: "1px solid rgba(255,255,255,0.12)",
-                      borderRadius: "4px",
-                      padding: "4px 10px",
-                      color: "#f0ede6",
-                    }}
-                  >
-                    {slide.year}
-                  </div>
-
-                  {/* text */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      bottom: "24px",
-                      left: "24px",
-                      right: "24px",
-                    }}
-                  >
-                    <p
-                      style={{
-                        fontFamily: "monospace",
-                        fontSize: "10px",
-                        letterSpacing: "0.35em",
-                        textTransform: "uppercase",
-                        color: "#c9f53b",
-                        marginBottom: "8px",
-                      }}
-                    >
-                      {slide.tag}
-                    </p>
-                    <h4
-                      style={{
-                        fontSize: "1.55rem",
-                        fontWeight: 700,
-                        letterSpacing: "-0.03em",
-                        margin: 0,
-                        lineHeight: 1.1,
-                        color: "#f0ede6",
-                        fontFamily: "'Syne', sans-serif",
-                      }}
-                    >
-                      {slide.title}
-                    </h4>
-                  </div>
-
-                  {/* active bottom line */}
-                  {realIndex === activeReal && (
-                    <div
-                      style={{
-                        position: "absolute",
-                        bottom: 0,
-                        left: 0,
-                        right: 0,
-                        height: "3px",
-                        background: "#c9f53b",
-                      }}
-                    />
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-          {/* dots + counter */}
-          <div
-            style={{
-              display: "flex",
-              gap: "8px",
-              padding: "32px 6vw 0",
-              alignItems: "center",
-            }}
-          >
-            {BASE_SLIDES.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => navigate(i - activeReal)}
-                style={{
-                  width: i === activeReal ? "32px" : "8px",
-                  height: "8px",
-                  borderRadius: "4px",
-                  background:
-                    i === activeReal ? "#c9f53b" : "rgba(255,255,255,0.2)",
-                  border: "none",
-                  cursor: "pointer",
-                  padding: 0,
-                  transition:
-                    "width 0.4s cubic-bezier(0.34,1.56,0.64,1), background 0.3s",
-                }}
-              />
-            ))}
-            <span
-              style={{
-                marginLeft: "auto",
-                fontFamily: "monospace",
-                fontSize: "12px",
-                color: "rgba(240,237,230,0.35)",
-              }}
-            >
-              {String(activeReal + 1).padStart(2, "0")} /{" "}
-              {String(N).padStart(2, "0")}
-            </span>
-          </div>
-        </div>
       </div>
       {/* ← FIXED: closing tag for <div style={{ position: "relative", zIndex: 1 }}> */}
 

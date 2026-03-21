@@ -139,7 +139,7 @@ export default function Footer() {
   const onSocialEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
     gsap.to(e.currentTarget, {
       scale: 1.15,
-      color: "#c9f53b",
+      color: "#0ea5e9",
       duration: 0.25,
       ease: "power2.out",
     });
@@ -147,7 +147,7 @@ export default function Footer() {
   const onSocialLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
     gsap.to(e.currentTarget, {
       scale: 1,
-      color: "rgba(240,237,230,0.45)",
+      color: "rgba(51,65,85,0.72)",
       duration: 0.25,
       ease: "power2.out",
     });
@@ -156,7 +156,7 @@ export default function Footer() {
   const onLinkEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
     gsap.to(e.currentTarget, {
       x: 6,
-      color: "#c9f53b",
+      color: "#0284c7",
       duration: 0.2,
       ease: "power2.out",
     });
@@ -164,7 +164,7 @@ export default function Footer() {
   const onLinkLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
     gsap.to(e.currentTarget, {
       x: 0,
-      color: "rgba(240,237,230,0.45)",
+      color: "rgba(51,65,85,0.72)",
       duration: 0.2,
       ease: "power2.out",
     });
@@ -176,8 +176,8 @@ export default function Footer() {
       style={{
         position: "relative",
         width: "100%",
-        backgroundColor: "#0c0c0c",
-        color: "#f0ede6",
+        backgroundColor: "#f8fafc",
+        color: "#0f172a",
         fontFamily: "'Syne', sans-serif",
         overflow: "hidden",
       }}
@@ -191,7 +191,7 @@ export default function Footer() {
           right: 0,
           height: 100,
           background:
-            "linear-gradient(to bottom, #0c0c0c 0%, transparent 100%)",
+            "linear-gradient(to bottom, #e2e8f0 0%, transparent 100%)",
           pointerEvents: "none",
           zIndex: 2,
         }}
@@ -219,7 +219,7 @@ export default function Footer() {
           width: "70vw",
           height: "40vh",
           background:
-            "radial-gradient(ellipse, rgba(201,245,59,0.055) 0%, transparent 70%)",
+            "radial-gradient(ellipse, rgba(14,165,233,0.08) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
@@ -261,7 +261,7 @@ export default function Footer() {
           height: 280,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(201,245,59,0.05) 0%, transparent 65%)",
+            "radial-gradient(circle, rgba(56,189,248,0.06) 0%, transparent 65%)",
           pointerEvents: "none",
           filter: "blur(2px)",
         }}
@@ -274,34 +274,38 @@ export default function Footer() {
           style={{
             height: 1,
             background:
-              "linear-gradient(90deg, transparent, #c9f53b 40%, rgba(255,255,255,0.12) 100%)",
+              "linear-gradient(90deg, transparent, #0ea5e9 40%, rgba(148,163,184,0.35) 100%)",
             transformOrigin: "left",
             marginBottom: 72,
             marginTop: 80,
           }}
         />
 
-        {/* ── Giant wordmark ── */}
+        {/* ── Responsive brand heading ── */}
         <div
           ref={bigTextRef}
-          style={{ overflow: "hidden", marginBottom: 80, lineHeight: 0.9 }}
+          style={{
+            overflow: "hidden",
+            marginBottom: 64,
+            lineHeight: 1.05,
+            maxWidth: 980,
+          }}
         >
-          {["IEDC", "Research", "Lab"].map((word, i) => (
+          {[
+            "Computer Science and Engineering",
+            "IoT | CS | BCT",
+          ].map((word, i) => (
             <div key={i} style={{ overflow: "hidden", display: "block" }}>
               <span
                 className="ft-word"
                 style={{
                   display: "inline-block",
-                  fontSize: "clamp(2.7rem, 10vw, 9rem)",
-                  fontWeight: 800,
-                  letterSpacing: "-0.04em",
+                  fontSize: i === 0 ? "clamp(1.85rem, 5.2vw, 4.4rem)" : "clamp(1rem, 2.1vw, 1.45rem)",
+                  fontWeight: i === 0 ? 800 : 700,
+                  letterSpacing: i === 0 ? "-0.02em" : "0.18em",
                   color:
-                    i === 2
-                      ? "#c9f53b"
-                      : i === 1
-                        ? "rgba(240,237,230,0.55)"
-                        : "#f0ede6",
-                  fontStyle: i === 1 ? "italic" : "normal",
+                    i === 1 ? "#0284c7" : "#0f172a",
+                  textTransform: i === 1 ? "uppercase" : "none",
                   opacity: 0,
                   willChange: "transform",
                 }}
@@ -310,6 +314,17 @@ export default function Footer() {
               </span>
             </div>
           ))}
+          <p
+            style={{
+              marginTop: 14,
+              fontSize: "clamp(0.84rem, 1.2vw, 1rem)",
+              color: "rgba(51,65,85,0.75)",
+              letterSpacing: "0.04em",
+              maxWidth: 700,
+            }}
+          >
+            Building future-ready innovation through focused programs, research, and collaboration.
+          </p>
         </div>
 
         {/* ── Columns grid ── */}
@@ -329,7 +344,7 @@ export default function Footer() {
                 fontSize: 10,
                 letterSpacing: "0.38em",
                 textTransform: "uppercase",
-                color: "#c9f53b",
+                color: "#0284c7",
                 fontFamily: "monospace",
                 marginBottom: 16,
               }}
@@ -339,7 +354,7 @@ export default function Footer() {
             <p
               style={{
                 fontSize: 14,
-                color: "rgba(240,237,230,0.45)",
+                color: "rgba(51,65,85,0.88)",
                 lineHeight: 1.8,
               }}
             >
@@ -356,7 +371,7 @@ export default function Footer() {
                 fontSize: 10,
                 letterSpacing: "0.38em",
                 textTransform: "uppercase",
-                color: "#c9f53b",
+                color: "#0284c7",
                 fontFamily: "monospace",
                 marginBottom: 16,
               }}
@@ -372,7 +387,7 @@ export default function Footer() {
                   onMouseLeave={onLinkLeave}
                   style={{
                     fontSize: 14,
-                    color: "rgba(240,237,230,0.45)",
+                    color: "rgba(51,65,85,0.88)",
                     textDecoration: "none",
                     fontFamily: "monospace",
                     letterSpacing: "0.04em",
@@ -393,7 +408,7 @@ export default function Footer() {
                 fontSize: 10,
                 letterSpacing: "0.38em",
                 textTransform: "uppercase",
-                color: "#c9f53b",
+                color: "#0284c7",
                 fontFamily: "monospace",
                 marginBottom: 16,
               }}
@@ -408,7 +423,7 @@ export default function Footer() {
                       fontSize: 9,
                       letterSpacing: "0.25em",
                       textTransform: "uppercase",
-                      color: "rgba(240,237,230,0.25)",
+                      color: "rgba(71,85,105,0.8)",
                       fontFamily: "monospace",
                       marginBottom: 3,
                     }}
@@ -418,7 +433,7 @@ export default function Footer() {
                   <p
                     style={{
                       fontSize: 13,
-                      color: "rgba(240,237,230,0.55)",
+                      color: "rgba(51,65,85,0.9)",
                       lineHeight: 1.5,
                     }}
                   >
@@ -436,7 +451,7 @@ export default function Footer() {
                 fontSize: 10,
                 letterSpacing: "0.38em",
                 textTransform: "uppercase",
-                color: "#c9f53b",
+                color: "#0284c7",
                 fontFamily: "monospace",
                 marginBottom: 16,
               }}
@@ -454,7 +469,7 @@ export default function Footer() {
                     display: "flex",
                     alignItems: "center",
                     gap: 10,
-                    color: "rgba(240,237,230,0.45)",
+                    color: "rgba(51,65,85,0.85)",
                     textDecoration: "none",
                     fontSize: 13,
                     fontFamily: "monospace",
@@ -475,7 +490,7 @@ export default function Footer() {
           ref={bottomRef}
           style={{
             opacity: 0,
-            borderTop: "1px solid rgba(255,255,255,0.06)",
+            borderTop: "1px solid rgba(148,163,184,0.45)",
             paddingBlock: 24,
             display: "flex",
             alignItems: "center",
@@ -487,12 +502,12 @@ export default function Footer() {
           <p
             style={{
               fontSize: 11,
-              color: "rgba(240,237,230,0.25)",
+              color: "rgba(71,85,105,0.82)",
               fontFamily: "monospace",
               letterSpacing: "0.08em",
             }}
           >
-            © {new Date().getFullYear()} IEDC Research Lab. All rights reserved.
+            © {new Date().getFullYear()} Computer Science and Engineering IoT, CS, BCT. All rights reserved.
           </p>
           <div style={{ display: "flex", gap: 24 }}>
             {["Privacy Policy", "Terms of Use", "Sitemap"].map((t) => (
@@ -501,17 +516,17 @@ export default function Footer() {
                 href="#"
                 style={{
                   fontSize: 11,
-                  color: "rgba(240,237,230,0.25)",
+                  color: "rgba(71,85,105,0.82)",
                   fontFamily: "monospace",
                   letterSpacing: "0.06em",
                   textDecoration: "none",
                 }}
                 onMouseEnter={(e) =>
-                  gsap.to(e.currentTarget, { color: "#c9f53b", duration: 0.2 })
+                  gsap.to(e.currentTarget, { color: "#0284c7", duration: 0.2 })
                 }
                 onMouseLeave={(e) =>
                   gsap.to(e.currentTarget, {
-                    color: "rgba(240,237,230,0.25)",
+                    color: "rgba(71,85,105,0.82)",
                     duration: 0.2,
                   })
                 }

@@ -8,80 +8,33 @@ import { gsap } from "gsap";
 const JOBS = [
   {
     id: 1,
-    company: "Spotify",
-    salary: "$120K – $200K",
-    title: "Senior Product Designer",
+
     accent: "#1db954",
-    image:
-      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&q=80",
-    tags: ["Design", "Figma", "UX"],
-    applicants: 30,
+    image: "/photo/1.jpg",
   },
   {
     id: 2,
-    company: "Bank VCA",
-    salary: "$60K – $112K",
-    title: "Senior Teller Executive",
+
     accent: "#e91e8c",
-    image:
-      "https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=600&q=80",
-    tags: ["Finance", "Banking"],
-    applicants: 10,
+    image: "/photo/2.jpg",
   },
   {
     id: 3,
-    company: "Twitch",
-    salary: "$300K – $500K",
-    title: "Sr Social Media Specialist",
+
     accent: "#9146ff",
-    image:
-      "https://images.unsplash.com/photo-1603481546579-65d935ba9cdd?w=600&q=80",
-    tags: ["Social", "Marketing"],
-    applicants: 24,
+    image: "/photo/3.jpg",
   },
   {
     id: 4,
-    company: "Apple",
-    salary: "$200K – $500K",
-    title: "Frontend Engineer",
+
     accent: "#ff9500",
-    image:
-      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&q=80",
-    tags: ["React", "Swift", "TS"],
-    applicants: 50,
+    image: "/photo/4.jpg",
   },
   {
     id: 5,
-    company: "Netflix",
-    salary: "$300K – $600K",
-    title: "Account Executive",
+
     accent: "#e50914",
-    image:
-      "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=600&q=80",
-    tags: ["Sales", "B2B"],
-    applicants: 18,
-  },
-  {
-    id: 6,
-    company: "Google",
-    salary: "$250K – $550K",
-    title: "ML Research Scientist",
-    accent: "#4285f4",
-    image:
-      "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=600&q=80",
-    tags: ["AI", "Python", "ML"],
-    applicants: 42,
-  },
-  {
-    id: 7,
-    company: "Airbnb",
-    salary: "$180K – $380K",
-    title: "Product Manager",
-    accent: "#ff5a5f",
-    image:
-      "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=600&q=80",
-    tags: ["Product", "Strategy"],
-    applicants: 36,
+    image: "/photo/5.jpg",
   },
 ];
 
@@ -90,6 +43,13 @@ const COUNT = JOBS.length;
 // ─── CARD DIMENSIONS ──────────────────────────────────────────────────────────
 const CARD_W = 320;
 const CARD_H = 400;
+
+const BRAND = {
+  primary: "#0369a1",
+  primarySoft: "#0284c7",
+  ink: "#020617",
+  inkSoft: "#1e293b",
+};
 
 // ─── ARC CONFIG ───────────────────────────────────────────────────────────────
 const RADIUS = 1100;
@@ -145,7 +105,11 @@ export default function CardCarousel() {
           ? 0
           : isActive
             ? 1
-            : Math.max(0.35, 0.9 - dist * 0.18);
+            : offset < 0 && dist <= 2
+              ? 1
+              : offset < 0
+                ? Math.max(0.78, 1 - dist * 0.1)
+                : Math.max(0.22, 0.72 - dist * 0.18);
       const zIndex = 20 - dist;
 
       // 3D: side cards rotate on Y axis to give depth; active faces forward
@@ -208,15 +172,16 @@ export default function CardCarousel() {
         zIndex: 2,
         minHeight: "100vh",
         overflowX: "clip",
-        overflowY: "visible",
+        overflowY: "hidden",
         userSelect: "none",
-        background: "#0c0c0c",
+        background:
+          "linear-gradient(180deg,#f8fbff 0%, #eef6ff 52%, #e7f0fb 100%)",
         fontFamily: "'DM Sans', sans-serif",
         width: "100%",
         perspective: 1400,
         perspectiveOrigin: "50% 100%",
       }}
-      className="md:mb-36 pt-22"
+      className="pt-28 md:pt-24"
     >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap');
@@ -224,6 +189,55 @@ export default function CardCarousel() {
         @keyframes blobB { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-14px) scale(0.95)} }
         @keyframes pulseGlow { 0%,100%{opacity:0.5} 50%{opacity:1} }
       `}</style>
+
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 0,
+          backgroundImage: "url('/photo/t1.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center 32%",
+          opacity: 1,
+          pointerEvents: "none",
+        }}
+      />
+
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          bottom: 0,
+          left: 0,
+          width: "84%",
+          zIndex: 2,
+          background:
+            "linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(247,252,255,0.95) 40%, rgba(236,246,255,0.72) 63%, rgba(236,246,255,0.34) 82%, rgba(236,246,255,0) 100%)",
+          pointerEvents: "none",
+        }}
+      />
+
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 1,
+          background:
+            "linear-gradient(180deg, rgba(255,255,255,0.34) 0%, rgba(247,252,255,0.2) 42%, rgba(229,240,252,0.12) 100%)",
+          pointerEvents: "none",
+        }}
+      />
+
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 6,
+          background:
+            "linear-gradient(to top, #ffffff 0%, #ffffff 10%, rgba(255,255,255,0.62) 20%, rgba(255,255,255,0.24) 30%, rgba(255,255,255,0) 42%)",
+          pointerEvents: "none",
+        }}
+      />
 
       {/* ── Ambient lime blobs ── */}
       <div
@@ -235,7 +249,7 @@ export default function CardCarousel() {
           height: 700,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle,rgba(201,245,59,0.07) 0%,transparent 65%)",
+            "radial-gradient(circle,rgba(2,132,199,0.09) 0%,transparent 65%)",
           pointerEvents: "none",
           animation: "blobA 10s ease-in-out infinite",
           zIndex: 0,
@@ -250,7 +264,7 @@ export default function CardCarousel() {
           height: 500,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle,rgba(168,214,42,0.06) 0%,transparent 65%)",
+            "radial-gradient(circle,rgba(14,165,233,0.07) 0%,transparent 65%)",
           pointerEvents: "none",
           animation: "blobB 13s ease-in-out infinite",
           zIndex: 0,
@@ -265,7 +279,7 @@ export default function CardCarousel() {
           height: 400,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle,rgba(201,245,59,0.05) 0%,transparent 65%)",
+            "radial-gradient(circle,rgba(56,189,248,0.06) 0%,transparent 65%)",
           pointerEvents: "none",
           animation: "blobA 16s ease-in-out infinite",
           zIndex: 0,
@@ -283,236 +297,130 @@ export default function CardCarousel() {
           zIndex: 3,
           transformStyle: "preserve-3d",
           pointerEvents: "none",
-        }} className="hidden md:block"
+        }}
+        className="hidden md:block"
       >
-        {JOBS.map((job, cardIndex) => (
-          <div
-            key={job.id}
-            ref={(el) => {
-              cardRefs.current[cardIndex] = el;
-            }}
-            onClick={() => {
-              const offset = getOffset(cardIndex);
-              setActive((a) => a + offset);
-              startAutoplay();
-            }}
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: "50%",
-              width: CARD_W,
-              height: CARD_H,
-              marginLeft: -CARD_W / 2,
-              cursor: "pointer",
-              transformOrigin: "bottom center",
-              willChange: "transform,opacity",
-              transformStyle: "preserve-3d",
-              pointerEvents: "auto",
-            }}
-          >
-            {/* Inner card */}
+        {JOBS.map((job, cardIndex) => {
+          const visualOffset = getOffset(cardIndex);
+
+          return (
             <div
+              key={job.id}
+              ref={(el) => {
+                cardRefs.current[cardIndex] = el;
+              }}
+              onClick={() => {
+                const offset = getOffset(cardIndex);
+                setActive((a) => a + offset);
+                startAutoplay();
+              }}
               style={{
-                width: "100%",
-                height: "100%",
-                borderRadius: 24,
-                overflow: "hidden",
-                position: "relative",
-                boxShadow:
-                  cardIndex === activeJobIndex
-                    ? `0 28px 72px rgba(0,0,0,0.75), 0 0 0 2.5px ${job.accent}`
-                    : "0 10px 40px rgba(0,0,0,0.55)",
-                transition: "box-shadow 0.4s",
+                position: "absolute",
+                bottom: 0,
+                left: "50%",
+                width: CARD_W,
+                height: CARD_H,
+                marginLeft: -CARD_W / 2,
+                cursor: "pointer",
+                transformOrigin: "bottom center",
+                willChange: "transform,opacity",
+                transformStyle: "preserve-3d",
+                pointerEvents: "auto",
               }}
             >
-              <Image
-                src={job.image}
-                alt={job.title}
-                fill
+              {/* Inner card */}
+              <div
                 style={{
-                  objectFit: "cover",
-                  filter:
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: 24,
+                  overflow: "hidden",
+                  position: "relative",
+                  boxShadow:
                     cardIndex === activeJobIndex
-                      ? "brightness(0.75) saturate(1.15)"
-                      : "brightness(0.38) saturate(0.65)",
-                  transition: "filter 0.5s",
-                }}
-              />
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background:
-                    "linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.05) 100%)",
-                }}
-              />
-              {cardIndex === activeJobIndex && (
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    background: `radial-gradient(ellipse at 50% 110%, ${job.accent}30, transparent 65%)`,
-                    pointerEvents: "none",
-                  }}
-                />
-              )}
-              {cardIndex === activeJobIndex && (
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    borderRadius: 24,
-                    border: `2px solid ${job.accent}`,
-                    pointerEvents: "none",
-                    boxShadow: `inset 0 0 20px ${job.accent}18`,
-                  }}
-                />
-              )}
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-end",
-                  padding: "20px 18px 18px",
-                  gap: 7,
+                      ? `0 28px 72px rgba(0,0,0,0.75), 0 0 0 2.5px ${job.accent}`
+                      : "0 10px 40px rgba(0,0,0,0.55)",
+                  transition: "box-shadow 0.4s",
                 }}
               >
+                <Image
+                  src={job.image}
+                  alt={"new card image"}
+                  fill
+                  sizes="(max-width: 767px) 0px, 360px"
+                  style={{
+                    objectFit: "cover",
+                    filter:
+                      cardIndex === activeJobIndex
+                        ? "brightness(0.75) saturate(1.15)"
+                        : visualOffset < 0
+                          ? "brightness(0.66) saturate(0.92)"
+                          : "brightness(0.4) saturate(0.68)",
+                    transition: "filter 0.5s",
+                  }}
+                />
                 <div
                   style={{
-                    alignSelf: "flex-start",
-                    fontSize: 10,
-                    fontWeight: 700,
-                    padding: "3px 10px",
-                    borderRadius: 99,
-                    background: `${job.accent}25`,
-                    color: job.accent,
-                    border: `1px solid ${job.accent}50`,
-                    backdropFilter: "blur(6px)",
-                    letterSpacing: "0.04em",
+                    position: "absolute",
+                    inset: 0,
+                    background:
+                      "linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.05) 100%)",
                   }}
-                >
-                  {job.company}
-                </div>
-                <div
-                  style={{
-                    fontWeight: 700,
-                    fontSize: 17,
-                    color: "#fff",
-                    lineHeight: 1.25,
-                  }}
-                >
-                  {job.title}
-                </div>
-                <div
-                  style={{ fontSize: 12, fontWeight: 600, color: job.accent }}
-                >
-                  {job.salary}
-                </div>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
-                  {job.tags.map((t) => (
-                    <span
-                      key={t}
-                      style={{
-                        fontSize: 10,
-                        fontWeight: 500,
-                        padding: "3px 9px",
-                        borderRadius: 99,
-                        background: "rgba(255,255,255,0.11)",
-                        color: "rgba(255,255,255,0.8)",
-                        backdropFilter: "blur(4px)",
-                        border: "1px solid rgba(255,255,255,0.08)",
-                      }}
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
+                />
                 {cardIndex === activeJobIndex && (
                   <div
                     style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      marginTop: 4,
+                      position: "absolute",
+                      inset: 0,
+                      background: `radial-gradient(ellipse at 50% 110%, ${job.accent}30, transparent 65%)`,
+                      pointerEvents: "none",
                     }}
-                  >
-                    <span
-                      style={{ fontSize: 10, color: "rgba(255,255,255,0.4)" }}
-                    >
-                      👥 {job.applicants}+ applied
-                    </span>
-                    <button
-                      onClick={(e) => e.stopPropagation()}
-                      style={{
-                        fontSize: 11,
-                        fontWeight: 700,
-                        padding: "6px 16px",
-                        borderRadius: 99,
-                        background: `linear-gradient(135deg,${job.accent},${job.accent}cc)`,
-                        color: "#fff",
-                        border: "none",
-                        cursor: "pointer",
-                        boxShadow: `0 4px 18px ${job.accent}55`,
-                      }}
-                    >
-                      Apply Now
-                    </button>
-                  </div>
+                  />
+                )}
+                {cardIndex === activeJobIndex && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      borderRadius: 24,
+                      border: `2px solid ${job.accent}`,
+                      pointerEvents: "none",
+                      boxShadow: `inset 0 0 20px ${job.accent}18`,
+                    }}
+                  />
                 )}
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
-      {/* ── Scrim: dark where text lives → opens up over cards → solid at section seam ─────
-           bottom is -9rem (144px) so it covers the overflow zone that mb-36 exposes,*/}
-    <div
-  style={{
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: "-14rem",
-    zIndex: 4,
-    pointerEvents: "none",
-    background: `
-      linear-gradient(
-        to bottom,
-        rgba(12,12,12,0) 0%,
-        rgba(12,12,12,0.1) 20%,
-        rgba(12,12,12,0.25) 40%,
-        rgba(12,12,12,0.5) 60%,
-        rgba(12,12,12,0.75) 80%,
-        #0c0c0c 100%
-      )
-    `,
-  }}
-/>
+      {/* ── Bottom-to-top blend overlay for smooth section continuity ───── */}
+
       {/* ── MAIN CONTENT — sits above scrim ── */}
       <div
+        className="flex w-full min-h-screen flex-col md:flex-row"
         style={{
           position: "relative",
           zIndex: 10,
           display: "flex",
-          flexDirection: "row",
           width: "100%",
           minHeight: "100vh",
-          padding: "48px 0 0 0",
+          padding: "24px 0 0 0",
           alignItems: "stretch",
         }}
       >
         {/* ── LEFT / CENTER — Institution name block ── */}
         <div
+          className=" text-center items-start md:text-left"
           style={{
             flex: 1,
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            padding: "0 6vw",
+            padding: "0 clamp(20px, 6vw, 96px)",
             minWidth: 0,
+            transform: "translateY(-28px)",
           }}
         >
           {/* Top label row */}
@@ -526,84 +434,37 @@ export default function CardCarousel() {
               fontWeight: 400,
               lineHeight: 0.95,
               letterSpacing: "0.01em",
-              color: "#fff",
+              color: BRAND.ink,
               margin: 0,
               marginBottom: 4,
+              textShadow: "0 2px 10px rgba(255,255,255,0.35)",
             }}
+            className="text-left"
           >
-            Innovation &amp;
+            Computer Science
             <br />
-            Entrepreneurship
-            <br />
-            <span
-              style={{
-                color: "#c9f53b",
-              }}
-            >
-              Development Cell
+            <span className="block">
+              and{" "}
+              <span
+                className="drop-shadow-[0_2px_12px_rgba(255,255,255,0.5)]"
+                style={{ color: BRAND.primary }}
+              >
+                Engineering
+              </span>
             </span>
           </h1>
 
-          {/* Acronym badge */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 14,
-              marginTop: 12,
-              marginBottom: 20,
-            }}
-          >
-            <span
-              style={{
-                fontFamily: "monospace",
-                fontSize: "clamp(1.1rem, 2.5vw, 1.8rem)",
-                fontWeight: 700,
-                color: "#0c0c0c",
-                background: "#c9f53b",
-                padding: "4px 20px",
-                letterSpacing: "0.25em",
-                borderRadius: 4,
-              }}
-            >
-              I.E.D.C
-            </span>
-            <div
-              style={{
-                height: 2,
-                flex: 1,
-                maxWidth: 120,
-                background: "linear-gradient(to right, #c9f53b, transparent)",
-              }}
-            />
-          </div>
 
           {/* Horizontal rule */}
           <div
             style={{
               height: 1,
               background:
-                "linear-gradient(to right, rgba(201,245,59,0.4), transparent)",
+                "linear-gradient(to right, rgba(2,132,199,0.55), transparent)",
               marginBottom: 20,
               width: "70%",
             }}
           />
-
-          {/* ── DEPARTMENT NAME ── */}
-          <h2
-            style={{
-              fontFamily: "'Bebas Neue', 'Arial Narrow', sans-serif",
-              fontSize: "clamp(1.5rem, 3.4vw, 3.2rem)",
-              fontWeight: 400,
-              lineHeight: 1.0,
-              letterSpacing: "0.015em",
-              color: "rgba(255,255,255,0.78)",
-              margin: 0,
-              marginBottom: 10,
-            }}
-          >
-            Department of Computer Science and Engineering
-          </h2>
 
           {/* Specialisations */}
           <div
@@ -626,9 +487,9 @@ export default function CardCarousel() {
                   fontSize: "clamp(0.6rem, 1vw, 0.78rem)",
                   letterSpacing: "0.06em",
                   textTransform: "uppercase" as const,
-                  color: "#c9f53b",
-                  border: "1px solid rgba(201,245,59,0.35)",
-                  background: "rgba(201,245,59,0.06)",
+                  color: "#0c4a6e",
+                  border: "1px solid rgba(3,105,161,0.38)",
+                  background: "rgba(241,249,255,0.85)",
                   padding: "5px 14px",
                   borderRadius: 4,
                 }}
@@ -637,6 +498,19 @@ export default function CardCarousel() {
               </span>
             ))}
           </div>
+
+          <p
+            style={{
+              maxWidth: "720px",
+              fontSize: "clamp(0.9rem, 1.25vw, 1.02rem)",
+              lineHeight: 1.6,
+              color: "#334155",
+              margin: "0 0 26px 0",
+            }}
+            className="text-left"
+          >
+            Empowering future engineers through AI-driven learning, secure computing practices, and decentralized system design. Our department blends research, innovation, and industry-ready skills across IoT, Cyber Security, and Blockchain Technology.
+          </p>
 
           {/* CTA buttons */}
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" as const }}>
@@ -647,11 +521,11 @@ export default function CardCarousel() {
                 fontSize: 13,
                 fontWeight: 700,
                 letterSpacing: "0.06em",
-                color: "#0c0c0c",
+                color: "#ecfeff",
                 border: "none",
                 cursor: "pointer",
-                background: "linear-gradient(135deg,#c9f53b,#a8d62a)",
-                boxShadow: "0 4px 28px rgba(201,245,59,0.35)",
+                background: "linear-gradient(135deg,#0369a1,#075985)",
+                boxShadow: "0 8px 28px rgba(3,105,161,0.34)",
                 textTransform: "uppercase" as const,
               }}
             >
@@ -664,28 +538,47 @@ export default function CardCarousel() {
                 fontSize: 13,
                 fontWeight: 700,
                 letterSpacing: "0.06em",
-                color: "#c9f53b",
-                border: "1px solid rgba(201,245,59,0.4)",
+                color: BRAND.inkSoft,
+                border: "1px solid rgba(3,105,161,0.42)",
                 cursor: "pointer",
-                background: "transparent",
+                background: "rgba(255,255,255,0.9)",
                 textTransform: "uppercase" as const,
               }}
             >
               Meet the Team
             </button>
           </div>
+
+          {/* Mobile tagline */}
+          <div
+            className="md:hidden"
+            style={{
+              marginTop: 71,
+              fontFamily: "monospace",
+              fontSize: 11,
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: "rgba(8,47,73,0.86)",
+              textAlign: "center",
+              width: "100%",
+            }}
+          >
+            Innovate · Build · Disrupt
+          </div>
         </div>
 
         {/* ── RIGHT — Vertical tagline strip ── */}
         <div
+          className="hidden md:flex"
           style={{
             width: 56,
             flexShrink: 0,
-            display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            borderLeft: "1px solid rgba(201,245,59,0.12)",
+            borderLeft: "1px solid rgba(14,165,233,0.22)",
+            background: "rgba(255,255,255,0.84)",
+            backdropFilter: "blur(2px)",
             padding: "40px 0",
             gap: 32,
             position: "relative",
@@ -701,7 +594,7 @@ export default function CardCarousel() {
               width: 1,
               height: "100%",
               background:
-                "linear-gradient(to bottom, transparent, rgba(201,245,59,0.2) 30%, rgba(201,245,59,0.2) 70%, transparent)",
+                "linear-gradient(to bottom, transparent, rgba(2,132,199,0.22) 30%, rgba(2,132,199,0.22) 70%, transparent)",
               pointerEvents: "none",
             }}
           />
@@ -716,7 +609,7 @@ export default function CardCarousel() {
               fontSize: 10,
               letterSpacing: "0.35em",
               textTransform: "uppercase" as const,
-              color: "rgba(201,245,59,0.7)",
+              color: "rgba(8,47,73,0.92)",
               userSelect: "none",
             }}
           >
@@ -724,9 +617,6 @@ export default function CardCarousel() {
           </div>
 
           {/* Divider dot */}
-          
-
-       
         </div>
       </div>
     </div>

@@ -18,58 +18,58 @@ interface LabSlide {
 const LAB_SLIDES: LabSlide[] = [
   {
     id: 1,
-    label: "Electron Microscopy",
-    category: "Imaging · Level 4",
+    label: "IoT Systems Lab",
+    category: "Embedded Intelligence · Block A",
     description:
-      "High-resolution transmission electron microscopy revealing nanoscale crystalline structures at 2Å resolution.",
+      "Design and deploy connected systems using sensors, gateways, and edge dashboards for smart automation use-cases.",
     year: "2024",
     color: "#c9f53b",
     imageUrl:
-      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1600&q=90",
+      "https://media.licdn.com/dms/image/v2/D4E22AQF_ZIDTTAd6Uw/feedshare-shrink_2048_1536/B4EZxsPPxUGgAk-/0/1771342462457?e=1775692800&v=beta&t=qTjrsB7H_5WVuTcnNfBOdyGF960S18YgR7o8QdpZDHg",
   },
   {
     id: 2,
-    label: "Protein Crystallography",
-    category: "Structural Biology · Lab B",
+    label: "Cyber Security Lab",
+    category: "Cyber Range · Secure Network Zone",
     description:
-      "X-ray diffraction patterns from engineered insulin analogs showing conformational shifts under physiological pH.",
+      "Practice ethical hacking, digital forensics, and intrusion analysis with real-time security monitoring toolchains.",
     year: "2024",
     color: "#a8d62a",
     imageUrl:
-      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1600&q=90",
+      "https://media.licdn.com/dms/image/v2/D5622AQHliEP-0Tk3Iw/feedshare-shrink_1280/B56Znh9SRtG4As-/0/1760432564009?e=1775692800&v=beta&t=BCzCD2hG1eeMpFAsqI6qroR64qGl-AYtkwBszhFWvGo",
   },
   {
     id: 3,
-    label: "Microfluidics Array",
-    category: "Lab-on-Chip · Series 7",
+    label: "Blockchain Innovation Lab",
+    category: "Decentralized Apps · Web3 Studio",
     description:
-      "Droplet generation at 8,000 Hz enabling single-cell encapsulation for high-throughput genomic screening.",
+      "Build smart contracts and decentralized applications with secure transaction design and trust-driven architectures.",
     year: "2023",
     color: "#c9f53b",
     imageUrl:
-      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1600&q=90",
+      "https://media.licdn.com/dms/image/v2/D5622AQHQ3QA5aldF-Q/feedshare-shrink_2048_1536/B56ZsOMfO5H8A0-/0/1765469714698?e=1775692800&v=beta&t=kqmOTbcpj4de-r5HkQGpwQ1FU8vjGoqYqW1lhOj0hyo",
   },
   {
     id: 4,
-    label: "Neural Interface",
-    category: "Neurotech · Prototype III",
+    label: "AI & Data Lab",
+    category: "Machine Intelligence · Analytics Hub",
     description:
-      "256-channel cortical recording array achieving simultaneous readout from prefrontal and hippocampal regions.",
+      "Train, evaluate, and deploy AI models for vision, NLP, and predictive analytics using accelerated compute resources.",
     year: "2024",
     color: "#a8d62a",
     imageUrl:
-      "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1600&q=90",
+      "https://media.licdn.com/dms/image/v2/D4D22AQGN70vPG5n9sA/feedshare-shrink_2048_1536/B4DZw3KhslI4Ak-/0/1770452032829?e=1775692800&v=beta&t=OLhrXe3vfQc4Ra0987L2uJUDLYbT00SQe_f6KMSfm4E",
   },
   {
     id: 5,
-    label: "Quantum Sensing",
-    category: "Quantum Lab · Cryogenic",
+    label: "Cloud & DevOps Lab",
+    category: "Scalable Systems · Deployment Center",
     description:
-      "NV-center diamond magnetometer operating at 15mK detecting sub-femtotesla magnetic anomalies.",
+      "Implement CI/CD, containerized microservices, and cloud-native workflows for production-grade software systems.",
     year: "2024",
     color: "#c9f53b",
     imageUrl:
-      "https://images.unsplash.com/photo-1518152006812-edab29b069ac?w=1600&q=90",
+      "https://media.licdn.com/dms/image/v2/D4D22AQHhqYvu9zdN8A/feedshare-shrink_2048_1536/B4DZw3FGnsGQAk-/0/1770450610877?e=1775692800&v=beta&t=JUs1PyYxUlNaczBiGMtwDjHtTYxCtr9lZBTPJzq9ldY",
   },
 ];
 //───────────────────────────────────────────────────
@@ -280,7 +280,7 @@ export default function LabCarousel() {
         style={{
           height: 80,
           background:
-            "linear-gradient(to bottom, #0c0c0c 0%, transparent 100%)",
+            "linear-gradient(to bottom, #e2e8f0 0%, transparent 100%)",
         }}
       />
       {/* Ambient gradient blobs */}
@@ -290,14 +290,14 @@ export default function LabCarousel() {
 
       {/* ── Section label ─────────────────────────────────────────────────── */}
       <div className="relative z-10 max-w-[1400px] mx-auto px-8 sm:px-12 lg:px-20  flex items-center gap-4">
-        <div className="h-px flex-1 bg-white/[0.06]" />
+        <div className="h-px flex-1 bg-slate-300/80" />
         <span
-          className="text-[20px] font-bold tracking-[0.4em] uppercase py-10"
-          style={{ color: "#c9f53b" }}
+          className="text-[20px] font-bold tracking-[0.4em] uppercase py-10 text-sky-700"
+     
         >
           ◆ Research Gallery ◆
         </span>
-        <div className="h-px flex-1 bg-white/[0.06]" />
+        <div className="h-px flex-1 bg-slate-300/80" />
       </div>
 
       {/* ── Carousel ──────────────────────────────────────────────────────── */}
@@ -339,14 +339,7 @@ export default function LabCarousel() {
                 className="absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(to right, rgba(12,12,12,0.95) 0%, rgba(12,12,12,0.6) 55%, rgba(12,12,12,0.15) 100%)",
-                }}
-              />
-              <div
-                className="absolute inset-0 opacity-[0.03]"
-                style={{
-                  backgroundImage:
-                    "repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,1) 2px,rgba(0,0,0,1) 4px)",
+                    "linear-gradient(to right, rgba(240,249,255,0.58) 0%, rgba(240,249,255,0.25) 48%, rgba(240,249,255,0.05) 100%)",
                 }}
               />
             </div>
@@ -367,8 +360,8 @@ export default function LabCarousel() {
               className="w-2 h-2 rounded-full animate-pulse"
               style={{ backgroundColor: slide.color }}
             />
-            <span className="text-[10px] tracking-[0.3em] uppercase text-white/40 font-mono">
-              IEDC Research Laboratory
+            <span className="text-[10px] tracking-[0.3em] uppercase text-slate-600 font-mono">
+             CSE(IoT, CS, BCT)
             </span>
           </div>
           <span
@@ -381,24 +374,24 @@ export default function LabCarousel() {
 
         {/* Corner hairlines */}
         <div className="absolute top-0 left-0 w-16 h-16 z-30 pointer-events-none">
-          <div className="absolute top-4 left-4 w-8 h-px bg-white/20" />
-          <div className="absolute top-4 left-4 h-8 w-px bg-white/20" />
+          <div className="absolute top-4 left-4 w-8 h-px bg-slate-400/70" />
+          <div className="absolute top-4 left-4 h-8 w-px bg-slate-400/70" />
         </div>
         <div className="absolute top-0 right-0 w-16 h-16 z-30 pointer-events-none">
-          <div className="absolute top-4 right-4 w-8 h-px bg-white/20" />
-          <div className="absolute top-4 right-4 h-8 w-px bg-white/20" />
+          <div className="absolute top-4 right-4 w-8 h-px bg-slate-400/70" />
+          <div className="absolute top-4 right-4 h-8 w-px bg-slate-400/70" />
         </div>
 
         {/* Main content */}
         <div className="absolute inset-0 z-30 flex flex-col justify-end pointer-events-none px-10 md:px-20 lg:px-24 pb-20">
           <div ref={metaRef} className="mb-4 flex items-center gap-4">
             <div
-              className="h-px w-12 flex-shrink-0"
-              style={{ backgroundColor: slide.color }}
+              className="h-px w-12 flex-shrink-0 bg-sky-800"
+             
             />
             <span
-              className="text-[10px] tracking-[0.3em] uppercase font-semibold font-mono"
-              style={{ color: slide.color }}
+              className="text-[10px] text-black tracking-[0.3em] uppercase font-semibold font-mono"
+             
             >
               {slide.category}
             </span>
@@ -406,7 +399,7 @@ export default function LabCarousel() {
 
           <h2
             ref={titleRef}
-            className="text-5xl md:text-7xl xl:text-8xl font-bold text-white leading-none mb-5"
+            className="text-5xl md:text-7xl xl:text-8xl font-bold text-slate-900 leading-none mb-5"
             style={{
               fontFamily: "'Bebas Neue','Arial Narrow',sans-serif",
               letterSpacing: "0.02em",
@@ -417,7 +410,7 @@ export default function LabCarousel() {
 
           <p
             ref={descRef}
-            className="max-w-lg text-sm md:text-base text-white/55 leading-relaxed mb-6"
+            className="max-w-lg text-sm md:text-base text-slate-700 leading-relaxed mb-6"
           >
             {slide.description}
           </p>
@@ -427,13 +420,13 @@ export default function LabCarousel() {
             <div className="flex items-baseline gap-1 font-mono">
               <span
                 ref={counterRef}
-                className="text-2xl font-bold tabular-nums"
-                style={{ color: slide.color }}
+                className="text-2xl font-bold tabular-nums text-sky-700"
+              
               >
                 {String(current + 1).padStart(2, "0")}
               </span>
-              <span className="text-white/25 text-sm mx-1">/</span>
-              <span className="text-white/30 text-sm tabular-nums">
+              <span className="text-slate-500 text-sm mx-1">/</span>
+              <span className="text-slate-500 text-sm tabular-nums">
                 {String(total).padStart(2, "0")}
               </span>
             </div>
@@ -441,14 +434,14 @@ export default function LabCarousel() {
             <div className="flex items-center gap-3 pointer-events-auto">
               <button
                 onClick={prev}
-                className="w-9 h-9 border border-white/15 flex items-center justify-center text-white/50 hover:border-[#c9f53b]/60 hover:text-[#c9f53b] transition-all duration-300 rounded-sm"
+                className="w-9 h-9 border border-slate-300 flex items-center justify-center text-slate-600 hover:border-sky-500/70 hover:text-sky-600 transition-all duration-300 rounded-sm"
                 aria-label="Previous"
               >
                 ←
               </button>
               <button
                 onClick={next}
-                className="w-9 h-9 border border-white/15 flex items-center justify-center text-white/50 hover:border-[#c9f53b]/60 hover:text-[#c9f53b] transition-all duration-300 rounded-sm"
+                className="w-9 h-9 border border-slate-300 flex items-center justify-center text-slate-600 hover:border-sky-500/70 hover:text-sky-600 transition-all duration-300 rounded-sm"
                 aria-label="Next"
               >
                 →
@@ -467,7 +460,7 @@ export default function LabCarousel() {
                     height: 3,
                     borderRadius: 2,
                     backgroundColor:
-                      i === current ? "#c9f53b" : "rgba(255,255,255,0.2)",
+                      i === current ? "#0284c7" : "rgba(100,116,139,0.45)",
                   }}
                 />
               ))}
@@ -477,7 +470,7 @@ export default function LabCarousel() {
 
         {/* Progress bar */}
         <div className="absolute bottom-0 left-0 right-0 z-30">
-          <div className="relative h-px bg-white/[0.08]">
+          <div className="relative h-px bg-slate-300/90">
             <div
               ref={progressBarRef}
               className="absolute top-0 left-0 h-full origin-left"
@@ -498,7 +491,7 @@ export default function LabCarousel() {
         style={{
           height: 60,
           background:
-            "linear-gradient(to bottom, transparent 0%, #0c0c0c 100%)",
+            "linear-gradient(to bottom, transparent 0%, #e2e8f0 100%)",
         }}
       />
 
