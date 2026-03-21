@@ -240,14 +240,14 @@ export default function Navbar() {
             </div>
 
             {/* Center Text */}
-            <div className="flex flex-col items-center justify-center flex-1 px-2 text-center overflow-hidden">
+            <div className="flex flex-col items-center justify-center flex-1 px-2 text-center overflow-hidden font-merriweather">
               <h1
                 className="text-[12px] sm:text-[18px] lg:text-[24px] font-black text-slate-900 leading-tight"
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+               
               >
                 Computer Science & Engineering
               </h1>
-              <div className="dept-badge overflow-hidden">
+              <div className="dept-badge overflow-hidden" >
                 <span className="hidden sm:inline-flex items-center mt-1 px-3 py-0.5 rounded-full bg-sky-50 text-sky-700 border border-sky-100 text-[10px] lg:text-[12px] font-semibold">
                   IoT, Cyber Security &amp; Blockchain Technology
                 </span>

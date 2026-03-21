@@ -12,6 +12,10 @@
   --font-mono: var(--font-code);
 }
 
+.font-merriweather {
+  font-family: var(--font-merriweather), Georgia, serif;
+}
+
 html,
 body {
   width: 100%;
@@ -22,7 +26,7 @@ body {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), "Segoe UI", sans-serif;
+  font-family: var(--font-playfair), "Times New Roman", serif;
   line-height: 1.45;
   background-image:
     linear-gradient(180deg, rgba(255, 255, 255, 0.65), rgba(234, 247, 255, 0.8)),

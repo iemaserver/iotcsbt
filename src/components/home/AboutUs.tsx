@@ -2,17 +2,12 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import { Merriweather } from "next/font/google";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const merriweather = Merriweather({
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  display: "swap",
-});
 
 /* --- Bento Card Data (Unchanged) --- */
 const bentoItems = [
@@ -330,7 +325,7 @@ export default function AboutUs() {
             {/* Unified Container for Sequential Scrubbing */}
             <div
               ref={textContainerRef}
-              className={`${merriweather.className} max-w-5xl text-center text-base sm:text-lg font-bold text-slate-700 leading-relaxed space-y-12`}
+              className="font-merriweather max-w-5xl text-center text-base sm:text-lg font-bold text-slate-700 leading-relaxed space-y-12"
             >
               {ABOUT_PARAGRAPHS.map((paragraph, index) => (
                 <AnimatedParagraph key={index} text={paragraph} index={index} />

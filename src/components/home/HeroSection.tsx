@@ -176,7 +176,7 @@ export default function CardCarousel() {
         userSelect: "none",
         background:
           "linear-gradient(180deg,#f8fbff 0%, #eef6ff 52%, #e7f0fb 100%)",
-        fontFamily: "'DM Sans', sans-serif",
+        fontFamily: "var(--font-playfair)",
         width: "100%",
         perspective: 1400,
         perspectiveOrigin: "50% 100%",
@@ -184,7 +184,7 @@ export default function CardCarousel() {
       className="pt-28 md:pt-24"
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         @keyframes blobA { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-24px) scale(1.06)} }
         @keyframes blobB { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-14px) scale(0.95)} }
         @keyframes pulseGlow { 0%,100%{opacity:0.5} 50%{opacity:1} }
@@ -195,7 +195,7 @@ export default function CardCarousel() {
           position: "absolute",
           inset: 0,
           zIndex: 0,
-          backgroundImage: "url('/photo/t1.jpg')",
+          backgroundImage: "url('https://res.cloudinary.com/dvky83edw/image/upload/v1774068989/iot/i6fesgigd7mcwixnsu8n.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center 32%",
           opacity: 1,
@@ -287,7 +287,6 @@ export default function CardCarousel() {
       />
 
       {/* ── CAROUSEL STAGE — absolutely behind everything ── */}
-     
 
       {/* ── Bottom-to-top blend overlay for smooth section continuity ───── */}
 
@@ -348,7 +347,6 @@ export default function CardCarousel() {
             </span>
           </h1>
 
-
           {/* Horizontal rule */}
           <div
             style={{
@@ -396,14 +394,18 @@ export default function CardCarousel() {
           <p
             style={{
               maxWidth: "720px",
+           
               fontSize: "clamp(0.9rem, 1.25vw, 1.02rem)",
               lineHeight: 1.6,
               color: "#334155",
               margin: "0 0 26px 0",
             }}
-            className="text-left"
+            className="text-left font-merriweather font-medium"
           >
-            Empowering future engineers through AI-driven learning, secure computing practices, and decentralized system design. Our department blends research, innovation, and industry-ready skills across IoT, Cyber Security, and Blockchain Technology.
+            Empowering future engineers through AI-driven learning, secure
+            computing practices, and decentralized system design. Our department
+            blends research, innovation, and industry-ready skills across IoT,
+            Cyber Security, and Blockchain Technology.
           </p>
 
           {/* CTA buttons */}
