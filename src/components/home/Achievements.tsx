@@ -102,14 +102,14 @@ export default function ResearchGlory() {
         {/* HEADER */}
         <div className="px-[6vw] py-[clamp(48px,8vw,96px)]">
           <p className="text-sky-600 text-[11px] tracking-[0.4em] uppercase mb-6 font-mono">
-            — Department Impact
+            — Department Impact CSE(IoT, CS, BT)
           </p>
 
           <h2
             ref={headingRef}
             className="text-[clamp(3rem,7vw,6.5rem)] font-bold leading-[1.05] tracking-tight"
           >
-            CSE Innovation <br/>in{" "}
+            Innovation <br/>in{" "}
             
             <em className="text-sky-800 italic">Action</em>
           </h2>
