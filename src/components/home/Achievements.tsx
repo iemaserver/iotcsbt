@@ -107,7 +107,7 @@ export default function ResearchGlory() {
 
           <h2
             ref={headingRef}
-            className="text-[clamp(3rem,7vw,6.5rem)] font-bold leading-[1.05] tracking-tight"
+            className="md:text-[clamp(3rem,7vw,6.5rem)] font-bold leading-[1.05] text-xl tracking-tight"
           >
             CSE(IoT, CS, BT) <br/>{" "}
             Innovation <br/>in{" "}
