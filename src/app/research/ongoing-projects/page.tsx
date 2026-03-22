@@ -17,113 +17,16 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     id: "p1",
-    title: "Smart Irrigation Intelligence Platform",
-    mentors: "Dr. Meera Raman",
-    students: "Rahul K., Sneha P., Amit J.",
-    image: "/photo/1.jpg",
-    description: "Developing predictive irrigation scheduling using soil, weather, and crop telemetry from distributed IoT nodes to optimize water usage.",
+    title: "Urban Sprawl Prediction",
+    mentors: "Avik Kr. Das",
+    students: "Suman Mishra",
+    image: "/research/suman.png",
+    description: "Using satellite imagery and machine learning to model and predict urban expansion patterns in rapidly growing cities, aiding sustainable development planning.",
   },
-  {
-    id: "p2",
-    title: "Campus Cyber Threat Analytics",
-    mentors: "Dr. Arjun Nair, Sweta Saha",
-    students: "Priya M., Rohan D.",
-    image: "/photo/2.jpg",
-    description: "Building anomaly detection pipelines for campus network traffic and automated incident response using machine learning.",
-  },
-  {
-    id: "p3",
-    title: "Blockchain Credential Verification",
-    mentors: "Dr. Keerthi S.",
-    students: "Vikram B., Anjali T.",
-    image: "/photo/3.jpg",
-    description: "A decentralized framework for tamper-proof academic records and cross-institution credential validation using smart contracts.",
-  },
-  {
-    id: "p4",
-    title: "AI-Powered Traffic Grid Optimization",
-    mentors: "Apurba Nandi, Dr. Sandip Mandal",
-    students: "Karan V., Neha S., Pooja R.",
-    image: "/photo/4.jpg",
-    description: "Implementing real-time computer vision models on edge devices to dynamically control traffic lights based on vehicle density.",
-  },
-  {
-    id: "p5",
-    title: "Decentralized Energy Trading Grid",
-    mentors: "Dr. Siddhartha Roy",
-    students: "Aman G., Shruti L.",
-    image: "/photo/5.jpg",
-    description: "Creating a peer-to-peer microgrid platform allowing localized trading of solar energy using blockchain ledgers.",
-  },
-  {
-    id: "p6",
-    title: "IoT Health Monitor Wearables",
-    mentors: "Sangita Dutta",
-    students: "Deepak S., Megha W.",
-    image: "/photo/1.jpg",
-    description: "Designing low-cost, low-power wearable devices for continuous tracking of vital signs in elderly patients.",
-  },
-  {
-    id: "p7",
-    title: "Drone-based Crop Disease Detection",
-    mentors: "Sayantani Das",
-    students: "Nikhil P., Tara M.",
-    image: "/photo/2.jpg",
-    description: "Utilizing autonomous drones equipped with multispectral cameras to identify agricultural blight before it spreads.",
-  },
-  {
-    id: "p8",
-    title: "Secure Cloud Storage Archiving",
-    mentors: "Rangon Sarkar",
-    students: "Arnav K., Ishita B.",
-    image: "/photo/3.jpg",
-    description: "A novel cryptographic approach to segmenting and storing highly sensitive institutional data across multiple cloud providers.",
-  },
-  {
-    id: "p9",
-    title: "AR Navigation for Visually Impaired",
-    mentors: "Dr. Arijeet Ghosh, Uddipan Ghosh",
-    students: "Sanya C., Rahul M.",
-    image: "/photo/4.jpg",
-    description: "A spatial-audio augmented reality system that uses smartphone LiDAR to guide visually impaired users through complex indoor environments.",
-  },
-  {
-    id: "p10",
-    title: "Automated Phishing Defense Net",
-    mentors: "Nitu Saha",
-    students: "Varun H., Kavya N.",
-    image: "/photo/5.jpg",
-    description: "Deploying natural language processing to intercept, analyze, and quarantine sophisticated socially engineered email attacks.",
-  },
-  {
-    id: "p11",
-    title: "Smart Waste Management Bins",
-    mentors: "Suchanda Chatterjee",
-    students: "Aditya R., Simran K.",
-    image: "/photo/1.jpg",
-    description: "IoT-enabled municipal bins that optimize collection routes based on real-time fill levels and odor sensors.",
-  },
-  {
-    id: "p12",
-    title: "Quantum Key Distribution Simulation",
-    mentors: "Ahona Ghosh",
-    students: "Tarun D., Sneha V.",
-    image: "/photo/2.jpg",
-    description: "Simulating QKD protocols over optical fiber networks to test resilience against future quantum computing attacks.",
-  },
+ 
 ];
 
-// ─── Icons ────────────────────────────────────────────────────────────────────
-function MentorIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className ?? "w-4 h-4"}>
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-      <circle cx="9" cy="7" r="4" />
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-    </svg>
-  );
-}
+
 
 export default function OngoingProjectsPage() {
   const ITEMS_PER_PAGE = 10;

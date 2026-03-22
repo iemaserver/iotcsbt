@@ -8,7 +8,7 @@ import DepartmentPage from "@/components/site/DepartmentPage";
 type Publication = {
   id: string;
   title: string;
-  kind: "Journal Papers" | "Conference Papers" | "Book Chapters";
+  kind: string;
   year: number;
   image: string;
   description: string;
@@ -17,114 +17,81 @@ type Publication = {
 
 // Expanded dummy data (12 items) to test search, filter, and pagination
 const PUBLICATIONS: Publication[] = [
-  {
+    {
     id: "pub1",
-    title: "Efficient Lightweight Encryption for Smart Devices",
+    title:
+      "TeaCureNet: A Lightweight Deep Learning Framework for Automated Tea Leaf Disease Detection and Treatment Recommendation",
     kind: "Journal Papers",
-    year: 2026,
-    image: "/photo/1.jpg",
-    description: "Proposes a novel, low-latency cryptographic algorithm specifically designed for resource-constrained IoT edge nodes, reducing power consumption by 34%.",
-    link: "#",
-  },
-  {
-    id: "pub2",
-    title: "Explainable Intrusion Detection using Hybrid Models",
-    kind: "Conference Papers",
     year: 2025,
-    image: "/photo/2.jpg",
-    description: "Combines deep learning with decision trees to provide transparent and explainable network anomaly detection for enterprise campus networks.",
-    link: "#",
+    image: "https://res.cloudinary.com/dvky83edw/image/upload/v1774163575/iot/research/38ce3575-0081-40e1-9f7d-912b6a25345e.png",
+    description:
+      "Published in the 2025 International Conference on Artificial Intelligence for Computing, Astronomy and Renewable Energy (AICARE), this work proposes a lightweight deep learning framework for automated tea leaf disease detection and treatment recommendation. Developed by Tuheena Bose, Divyanshi Srivastava, Apurba Nandi, Dr. Arijeet Ghosh, Avik Das, and Sangita Dutta, it focuses on efficient AI deployment for agricultural applications.",
+    link: "https://ieeexplore.ieee.org/document/11402725",
+  },
+   {
+    id: "pub2",
+    title:
+      "Hybrid Multi-Entity Reinforcement Learning Approach for Intelligent, Scalable Career Path Recommendations in Alumni Networks",
+    kind: "Journal Papers",
+    year: 2025,
+    image: "https://res.cloudinary.com/dvky83edw/image/upload/v1774164024/iot/research/9374bf7c-569e-4418-ba29-f56d2ffb54e9.png",
+    description:
+      "Published in the 13th International Conference on Intelligent Embedded, MicroElectronics, Communication and Optical Networks (IEMECON 2025), this work proposes a hybrid multi-entity reinforcement learning approach for intelligent and scalable career path recommendation systems in alumni networks. The research focuses on AI-driven decision systems for social and professional network optimization.",
+    
+    link: "https://lnkd.in/dviCHiXG",
   },
   {
     id: "pub3",
-    title: "Decentralized Trust for Edge Networks",
+    title:
+      "Knowledge-Guided Nested Deep Learning Framework for Explainable Embryo Viability Assessment in Assisted Reproductive Technologies",
     kind: "Journal Papers",
-    year: 2024,
-    image: "/photo/3.jpg",
-    description: "A comprehensive framework utilizing blockchain ledgers to establish peer-to-peer trust among ad-hoc edge computing clusters.",
-    link: "#",
+    year: 2025,
+    image: "https://res.cloudinary.com/dvky83edw/image/upload/v1774163844/iot/research/44292ef0-f0fb-4bdc-85bc-514a4fb2747c.png",
+    description:
+      "Published in the IEEE SILCHAR Subsection Flagship Conference 2025, this research proposes a knowledge-guided nested deep learning framework for explainable embryo viability assessment in assisted reproductive technologies, focusing on improving interpretability and accuracy in medical AI systems.",
+    
+    link: "https://lnkd.in/dvt7eqyp",
   },
-  {
+ {
     id: "pub4",
-    title: "Chapter: Secure IoT-by-Design Patterns",
-    kind: "Book Chapters",
-    year: 2026,
-    image: "/photo/4.jpg",
-    description: "An extensive book chapter detailing foundational software architecture patterns that inherently resist common IoT hardware vulnerabilities.",
-    link: "#",
+    title:
+      "Explainable Spectro-Temporal Modeling for Indian Raga Classification Using Hybrid Neural Network",
+    kind: "IEEE Conference Paper",
+    year: 2025,
+    image: "https://res.cloudinary.com/dvky83edw/image/upload/v1774164269/iot/research/c301a28a-1910-4227-9ed8-bdd06f61ea7b.png",
+    description:
+      "This work proposes an explainable spectro-temporal modeling approach for Indian classical raga classification using a hybrid neural network, focusing on interpretability in generative and responsible AI systems.",
+   
+    link: "https://lnkd.in/d9Jxbq3E",
   },
   {
     id: "pub5",
-    title: "Adaptive Scheduling in Campus Compute Grids",
-    kind: "Conference Papers",
-    year: 2023,
-    image: "/photo/5.jpg",
-    description: "Introduces an adaptive heuristic for scheduling parallel computing tasks across distributed university laboratory computers during off-hours.",
-    link: "#",
+    title:
+      "Explainable U-Net Based Autoencoder Model for Radiation Dose Optimization in Computed Tomography Imaging",
+    kind: "IEEE Conference Paper",
+    year: 2025,
+    
+    image: "https://res.cloudinary.com/dvky83edw/image/upload/v1774164222/iot/research/1769190c-ba27-49b7-9f27-528fc299cb92.png",
+    description:
+      "This research introduces an explainable U-Net based autoencoder model aimed at optimizing radiation dose in CT imaging while maintaining diagnostic accuracy.",
+
+    link: "https://lnkd.in/dB7Nmn3g",
   },
+  
   {
     id: "pub6",
-    title: "Quantum-Resistant Key Exchange in 5G",
-    kind: "Journal Papers",
+    title:
+      "Clinically Interpretable Hybrid Deep Neural Architecture for Multi-Domain Acoustic Feature Learning in Dysarthric Speech Analysis",
+    kind: "IEEE Conference Paper",
     year: 2026,
-    image: "/photo/1.jpg",
-    description: "Evaluating the performance overhead of lattice-based cryptography when integrated into existing 5G telecommunication handshakes.",
+   
+    image: "https://res.cloudinary.com/dvky83edw/image/upload/v1774164316/iot/research/a1e2e3ce-5fd3-4fa9-8836-f4fab43519f8.png",
+    description:
+      "This work proposes a clinically interpretable hybrid deep neural architecture for analyzing dysarthric speech using multi-domain acoustic feature learning.",
+  
     link: "#",
   },
-  {
-    id: "pub7",
-    title: "Federated Learning for Healthcare Wearables",
-    kind: "Conference Papers",
-    year: 2025,
-    image: "/photo/2.jpg",
-    description: "Demonstrates a privacy-preserving machine learning pipeline where patient data never leaves the wearable device while still improving the global model.",
-    link: "#",
-  },
-  {
-    id: "pub8",
-    title: "Chapter: AI in Automated Code Review",
-    kind: "Book Chapters",
-    year: 2024,
-    image: "/photo/3.jpg",
-    description: "Explores the evolution of static analysis tools augmented by Large Language Models to detect logical bugs and security flaws.",
-    link: "#",
-  },
-  {
-    id: "pub9",
-    title: "Optimizing Graph Neural Networks on Edge GPUs",
-    kind: "Journal Papers",
-    year: 2025,
-    image: "/photo/4.jpg",
-    description: "A hardware-aware compilation strategy that reduces memory bottlenecks when running complex GNNs on mobile-grade GPUs.",
-    link: "#",
-  },
-  {
-    id: "pub10",
-    title: "Smart Contract Vulnerability Scanner",
-    kind: "Conference Papers",
-    year: 2024,
-    image: "/photo/5.jpg",
-    description: "A novel automated tool combining symbolic execution and fuzzing to proactively identify reentrancy attacks in Ethereum smart contracts.",
-    link: "#",
-  },
-  {
-    id: "pub11",
-    title: "Energy-Harvesting WSN Routing Protocols",
-    kind: "Journal Papers",
-    year: 2023,
-    image: "/photo/1.jpg",
-    description: "Analyzes routing efficiency in Wireless Sensor Networks powered by ambient energy harvesting, proposing a battery-aware pathing metric.",
-    link: "#",
-  },
-  {
-    id: "pub12",
-    title: "Chapter: The Future of Spatial Computing",
-    kind: "Book Chapters",
-    year: 2026,
-    image: "/photo/2.jpg",
-    description: "Discusses the intersection of AR/VR, edge computing, and real-time object detection in shaping next-generation user interfaces.",
-    link: "#",
-  },
+ 
 ];
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
