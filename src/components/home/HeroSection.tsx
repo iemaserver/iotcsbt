@@ -323,7 +323,7 @@ export default function CardCarousel() {
           <h1
             style={{
               fontFamily: "'Bebas Neue', 'Arial Narrow', sans-serif",
-              fontSize: "clamp(3.2rem, 7.5vw, 7rem)",
+              fontSize: "clamp(3rem, 7vw, 6.2rem)",
               fontWeight: 400,
               lineHeight: 0.95,
               letterSpacing: "0.01em",
