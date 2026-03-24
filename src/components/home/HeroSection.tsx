@@ -376,15 +376,16 @@ export default function CardCarousel() {
                 key={s}
                 style={{
                   fontFamily: "monospace",
-                  fontSize: "clamp(0.6rem, 1vw, 0.78rem)",
+                  fontSize: "clamp(0.6rem, 1vw, 0.89rem)",
                   letterSpacing: "0.06em",
                   textTransform: "uppercase" as const,
                   color: "#0c4a6e",
                   border: "1px solid rgba(3,105,161,0.38)",
-                  background: "rgba(241,249,255,0.85)",
+                
                   padding: "5px 14px",
                   borderRadius: 4,
                 }}
+                className="bg-green-200/80 font-bold text-sky-900"
               >
                 {s}
               </span>
