@@ -23,7 +23,7 @@ const NAV_ITEMS: NavItem[] = [
     ],
   },
   { label: "Laboratories", children:[
-    {label:"Lab Gallery", href:"/labs"},
+    {label:"Lab Infrastructure", href:"/labs"},
        {label:"I.E.D.C Lab", href:"https://iedc.uem.edu.in/"},
       {label:"SATYAMEBA", href:"https://satyameba.co.in"},
 
