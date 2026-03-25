@@ -527,13 +527,7 @@ export default function FacultyPage() {
 
         {/* Faculty Researchers (Grid) */}
         <div className="relative z-10">
-          <div className="mb-8 flex items-center gap-4">
-            <span className="h-[2px] flex-1 bg-gradient-to-r from-transparent to-slate-400/90" />
-            <span className="text-sm md:text-base font-extrabold uppercase tracking-[0.18em] text-slate-700 text-center">
-              Faculty Researchers
-            </span>
-            <span className="h-[2px] flex-1 bg-gradient-to-l from-transparent to-slate-400/90" />
-          </div>
+          
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8">
             {otherFacultyResearchers.map((member, index) => (

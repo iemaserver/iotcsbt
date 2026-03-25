@@ -19,9 +19,15 @@ const NAV_ITEMS: NavItem[] = [
     children: [
       { label: "Ongoing Projects", href: "/research/ongoing-projects" },
       { label: "Publications", href: "/research/publications" },
+   
     ],
   },
-  { label: "Laboratories", href: "/labs" },
+  { label: "Laboratories", children:[
+    {label:"Lab Gallery", href:"/labs"},
+       {label:"I.E.D.C Lab", href:"https://iedc.uem.edu.in/"},
+      {label:"SATYAMEBA", href:"https://satyameba.co.in"},
+
+  ]},
   { label: "Achievements", href: "/achievements" },
   {
     label: "Events",
