@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
     compilationMode: "annotation",
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
